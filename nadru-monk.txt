@@ -1,0 +1,213 @@
+Human
+str 10 0
+dex 11 0
+con 16 3
+wis 19 4
+int 13 1
+cha 13 1
+move: 30ft
+initiative:  4
+skills: { concentration: 15,
+  listen: 16,
+  spot: 16,
+  movesilent: 4,
+  hide: 4,
+  tumble: 4,
+  survival: 20,
+  knownature: 15,
+  wildempathy: 10 }
+saves: { fortitude: 11, reflex: 4, will: 12 }
+ac: { touch: 14, flatfooted: 14, normal: 14 }
+attack: + 6
+grapple:  10
+dambonus: 0
+specials: [ 'unarmed monk: +0 1d6' ]
+hp: 74
+feats: { 'Spell Focus Conjuration': '+1 difficulty class',
+  'improved initiative': 'initiative +4',
+  'Augment Summoning': '+4con +4str to summons',
+  'Natural spell': 'casting in wild shape',
+  Leadership: 'attract cohort and followers' }
+class: { 'flurry of blows': '-2/-2 attack instead of +0',
+  'improved grapple': 'no attck of opportunity when starting a grapple; +4 grapple bonus',
+  'unarmed strike': '1d6 unarmed attack lethal or nonlethal',
+  'ac bonus': 'wis to ac when unarmored and unencumbered',
+  'animal companion': 'gain animal after 24hr ritual',
+  'nature sense': '+2 knownature and survival',
+  'wild empathy': 'animal diplomacy',
+  'woodland stride': 'normal speed in undergrowth',
+  'trackless step': 'untrackable',
+  'resist natures lure ': '+4 save vs. fey spell-like ability',
+  'wild shape': '3 times per day 8hrs, small, medium, large' }
+spells: { todo: 'todo' }
+
+
+dire lion
+str 25 7
+dex 15 2
+con 17 3
+wis 19 4
+int 13 1
+cha 13 1
+move: 40ft walk
+initiative:  6
+skills: { concentration: 15,
+  listen: 16,
+  spot: 16,
+  movesilent: 6,
+  hide: 2,
+  tumble: 6,
+  survival: 20,
+  knownature: 15,
+  wildempathy: 10 }
+saves: { fortitude: 11, reflex: 6, will: 12 }
+ac: { touch: 15, flatfooted: 17, normal: 19 }
+attack: + 13
+grapple:  21
+dambonus: 7
+specials: [ 'claw: +0 1d6',
+  'claw: +0 1d6',
+  'bite: -5 1d8',
+  'Improved Grab (Ex): To use this ability, a dire lion must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can rake.',
+  'Pounce (Ex): If a dire lion charges, it can make a full attack, including two rake specials.',
+  'Rake (Ex): Attack bonus +12 melee, damage 1d6+3.',
+  'Skills: Dire lions have a +4 racial bonus on Hide and Move Silently checks.' ]
+
+
+dire wolf
+str 25 7
+dex 15 2
+con 17 3
+wis 19 4
+int 13 1
+cha 13 1
+move: 50ft walk
+initiative:  6
+skills: { concentration: 15,
+  listen: 16,
+  spot: 16,
+  movesilent: 6,
+  hide: 2,
+  tumble: 6,
+  survival: 20,
+  knownature: 15,
+  wildempathy: 10 }
+saves: { fortitude: 11, reflex: 6, will: 12 }
+ac: { touch: 15, flatfooted: 16, normal: 18 }
+attack: + 13
+grapple:  21
+dambonus: 7
+specials: [ 'bite: 0 1d8',
+  'Trip (Ex): A dire wolf that hits with a bite attack can attempt to trip its opponent (+11 check modifier) as a free action without making a touch attack or provoking an attack of opportunity. If the attempt fails, the opponent cannot react to trip the dire wolf.',
+  'Skills: A dire wolf has a +2 racial bonus on Hide, Listen, Move Silently, and Spot checks. ' ]
+
+
+brown bear
+str 27 8
+dex 13 1
+con 19 4
+wis 19 4
+int 13 1
+cha 13 1
+move: 40ft walk
+initiative:  5
+skills: { concentration: 16,
+  listen: 16,
+  spot: 16,
+  movesilent: 5,
+  hide: 1,
+  tumble: 5,
+  survival: 20,
+  knownature: 15,
+  wildempathy: 10 }
+saves: { fortitude: 12, reflex: 5, will: 12 }
+ac: { touch: 14, flatfooted: 18, normal: 19 }
+attack: + 14
+grapple:  22
+dambonus: 8
+specials: [ 'claw: +0 1d8',
+  'claw: +0 1d8',
+  'bite: -5 2d6',
+  'Improved Grab (Ex): To use this ability, a brown bear must hit with a claw attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity.',
+  'Skills: A brown bear has a +4 racial bonus on Swim checks. ' ]
+
+
+rhinoceros
+str 26 8
+dex 10 0
+con 21 5
+wis 19 4
+int 13 1
+cha 13 1
+move: 30ft walk
+initiative:  4
+skills: { concentration: 17,
+  listen: 16,
+  spot: 16,
+  movesilent: 4,
+  hide: 0,
+  tumble: 4,
+  survival: 20,
+  knownature: 15,
+  wildempathy: 10 }
+saves: { fortitude: 13, reflex: 4, will: 12 }
+ac: { touch: 13, flatfooted: 20, normal: 20 }
+attack: + 14
+grapple:  22
+dambonus: 8
+specials: [ 'gore: +0 2d6', 'powerful charge (double dam)' ]
+
+
+eagle
+str 10 0
+dex 15 2
+con 12 1
+wis 19 4
+int 13 1
+cha 13 1
+move: 10ft walk / 80ft fly
+initiative:  6
+skills: { concentration: 13,
+  listen: 16,
+  spot: 16,
+  movesilent: 6,
+  hide: 10,
+  tumble: 6,
+  survival: 20,
+  knownature: 15,
+  wildempathy: 10 }
+saves: { fortitude: 9, reflex: 6, will: 12 }
+ac: { touch: 17, flatfooted: 16, normal: 18 }
+attack: + 6
+grapple:  6
+dambonus: 0
+specials: [ 'talon: +0 1d4',
+  'talon: +0 1d4',
+  'bite: -5 1d4',
+  'Skills: Eagles have a +8 racial bonus on Spot checks. ' ]
+
+
+dire bat
+str 17 3
+dex 22 6
+con 17 3
+wis 19 4
+int 13 1
+cha 13 1
+move: 20ft walk / 40ft fly
+initiative:  10
+skills: { concentration: 15,
+  listen: 16,
+  spot: 16,
+  movesilent: 10,
+  hide: 6,
+  tumble: 10,
+  survival: 20,
+  knownature: 15,
+  wildempathy: 10 }
+saves: { fortitude: 11, reflex: 10, will: 12 }
+ac: { touch: 19, flatfooted: 18, normal: 24 }
+attack: + 9
+grapple:  17
+dambonus: 3
+specials: [ 'bite +0 1d8' ]

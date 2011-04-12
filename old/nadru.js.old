@@ -1,6 +1,6 @@
 basestats = {
-    str: 10,
-    dex: 11,
+    str: 11,
+    dex: 10,
     con: 13,
     'int': 16,
     wis: 17,
@@ -86,9 +86,43 @@ function ac() {
              normal: fullac};
 }
 
-for(stat in basestats) {
-    console.log(stat, stats[stat], mod(stats[stat]));
+// saves
+function saves() {
+    return {
+	fortitude: mod(stats.con) + 2 + 6,
+	reflex: mod(stats.dex) + 2 + 2,
+	will: mod(stats.dex) + 2 + 6,
+    }
 }
-console.log("skills:", skills());
-console.log("ac:", ac());
-console.log("hp:", basehp);
+// movement
+move = "30ft";
+function initiative() {
+    return mod(stats.dex);
+}
+
+// print character 
+function print() {
+    for(stat in basestats) {
+        console.log(stat, stats[stat], mod(stats[stat]));
+    }
+    console.log("move:", move);
+    console.log("initiative: ", initiative);
+    console.log("skills:", skills());
+    console.log("ac:", ac());
+    console.log("hp:", basehp);
+    console.log("saves:", saves);
+}
+print();
+
+// wild shapes
+
+console.log("dire bat");
+move = "20ft walk / 40ft fly"
+stats = Object.create(stats);
+stats.str = 17;
+stats.dex = 22;
+stats.con = 17;
+size = 1;
+raturalac = 5;
+print();
+
