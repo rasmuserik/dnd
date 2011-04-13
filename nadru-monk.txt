@@ -164,7 +164,7 @@ skills: { concentration: 15,
   wildempathy: 10 }
 saves: { fortitude: 11, reflex: 6, will: 12 }
 ac: { touch: 15, flatfooted: 17, normal: 19 }
-attack: + 13
+attack: + 12
 grapple:  21
 dambonus: 7
 specials: [ 'claw: +0 1d6',
@@ -196,7 +196,7 @@ skills: { concentration: 15,
   wildempathy: 10 }
 saves: { fortitude: 11, reflex: 6, will: 12 }
 ac: { touch: 15, flatfooted: 16, normal: 18 }
-attack: + 13
+attack: + 12
 grapple:  21
 dambonus: 7
 specials: [ 'bite: 0 1d8',
@@ -224,7 +224,7 @@ skills: { concentration: 16,
   wildempathy: 10 }
 saves: { fortitude: 12, reflex: 5, will: 12 }
 ac: { touch: 14, flatfooted: 18, normal: 19 }
-attack: + 14
+attack: + 13
 grapple:  22
 dambonus: 8
 specials: [ 'claw: +0 1d8',
@@ -254,7 +254,7 @@ skills: { concentration: 17,
   wildempathy: 10 }
 saves: { fortitude: 13, reflex: 4, will: 12 }
 ac: { touch: 13, flatfooted: 20, normal: 20 }
-attack: + 14
+attack: + 13
 grapple:  22
 dambonus: 8
 specials: [ 'gore: +0 2d6', 'powerful charge (double dam)' ]
@@ -280,7 +280,7 @@ skills: { concentration: 13,
   wildempathy: 10 }
 saves: { fortitude: 9, reflex: 6, will: 12 }
 ac: { touch: 17, flatfooted: 16, normal: 18 }
-attack: + 6
+attack: + 7
 grapple:  6
 dambonus: 0
 specials: [ 'talon: +0 1d4',
@@ -309,7 +309,7 @@ skills: { concentration: 15,
   wildempathy: 10 }
 saves: { fortitude: 11, reflex: 10, will: 12 }
 ac: { touch: 19, flatfooted: 18, normal: 24 }
-attack: + 9
+attack: + 8
 grapple:  17
 dambonus: 3
 specials: [ 'bite +0 1d8' ]

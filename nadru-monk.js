@@ -285,7 +285,7 @@ function print() {
     console.log("skills:", skills());
     console.log("saves:", saves());
     console.log("ac:", ac());
-    console.log("attack: +", bab + mod(stats.str));
+    console.log("attack: +", bab + mod(stats.str) - size);
     console.log("grapple: ", bab + mod(stats.str) + 4*size + 4 /*improved grapple */);
     console.log("dambonus:", mod(stats.str));
     console.log("specials:" , specials);
