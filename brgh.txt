@@ -1,0 +1,26 @@
+Race: Ogre
+str: 15 + 10 + 1 = 26 (+8)
+dex: 15 - 2 = 13 (+1)
+con: 14 + 4 = 18 (+4)
+int: 11 - 4 = 7 (-2)
+wis: 14 = 14 (+2)
+cha: 14 - 4 = 10 (+0)
+
+HP: 4d8 (5+8+4+7) + 4 * 4(con) = 40
+AC: 10 + 1(dex) - 1(size) + 5(natural armor) + ??(armor) = 15+armor
+Melee: 3(bab) - 1(size) + 8(str) = 10
+Ranged: 3(bab) - 1(size) + 1(dex) = 3
+Skills: spot 7(ranks) + 2(wis) = 9
+Vision: 60ft dark + lowlight
+Movement: 40ft.
+Grapple: 8(str) + 4(size) = 12
+
+Initiative: +1
+
+Gear(?):
+
+Masterwork large Greataxe
+attack: 11, dam: 3d6 + 12(str*1.5)
+
+Chain shirt
+total ac: 19
