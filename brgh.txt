@@ -1,26 +1,116 @@
 Race: Ogre
 str: 15 + 10 + 1 = 26 (+8)
-dex: 15 - 2 = 13 (+1)
+dex: 14 - 2 = 12 (+1)
 con: 14 + 4 = 18 (+4)
 int: 11 - 4 = 7 (-2)
 wis: 14 = 14 (+2)
-cha: 14 - 4 = 10 (+0)
+cha: 15 - 4 = 11 (+0)
 
-HP: 4d8 (5+8+4+7) + 4 * 4(con) = 40
-AC: 10 + 1(dex) - 1(size) + 5(natural armor) + ??(armor) = 15+armor
-Melee: 3(bab) - 1(size) + 8(str) = 10
-Ranged: 3(bab) - 1(size) + 1(dex) = 3
-Skills: spot 7(ranks) + 2(wis) = 9
+HP: 49: 9+2
+AC: 10 + 1(dex) - 1(size) + 5(natural armor) + ??(armor) = 15+armor = 24
+Melee+throw: 4(bab) - 1(size) + 8(str) = 11
+Ranged: 4(bab) - 1(size) + 1(dex) = 4
 Vision: 60ft dark + lowlight
-Movement: 40ft.
-Grapple: 8(str) + 4(size) = 12
+Movement: 30ft (40ft. unarmed)
+Grapple: 8(str) + 4(size) + 4(improved grapple) = 16
 
-Initiative: +1
+Skills: 
+move silently 1 + 4 = 5
+spot 2 + 4 + 2 = 8
+listen 2 + 4 + 2 = 8
+survival 2 + 4 = 6
+jump 8 + 2  = 10
+
+Favored enemy: Human +2 dam
+
+12/6/6 
+cloak of resistance +1/+1/+1
+1x hand of mage (magehand at will)
+1x potion of fly
+1x potion of levitate 
+2x potion of bears endurance (+4 con / x minutes)
+
+Initiative: +5
 
 Gear(?):
 
 Masterwork large Greataxe
-attack: 11, dam: 3d6 + 12(str*1.5)
+attack: 12, dam: 3d6 + 12(str*1.5)
+Masterwork huge Greataxe
+attack: 10, dam: 4d6 + 12(str*1.5)
 
-Chain shirt
-total ac: 19
+Full plate
+total ac: 23
+
+Feats:
+flaw, flaw, lvl1, lvl3, (?lvl6?), (?fighter?), (?fighter?)
+Catch Off-guard (pfsrd)f no penalty on improvised melee weapons (flaw)
+Throw Anything (pfsrd)f no penalty on improvised thrown weapons (flaw)
+Brutal Throw (MM5)f str instead of dex on throwing. (fighter)
+Quick Draw (PHB)f draw weapon as free action (throw at full rate) (fighter)
+Monkey Grip (CWar) weapon 1 size larger at -2 penalty
+Improv. initiative
+
+rng: track, fav.enemy:human,
+monk: improv grapple, combat reflexes, (light: evasion)
+
+Flaws:
+Naive (-4 on all Bluff and Sense Motive checks.)
+Idiot (-2 on intbased skills)
+
+Items:
+Full Plate Armor
+amulet nat prot
+back of tricks, gray
+
+
+
+HP: 8+7+5+5+4 + 5*4 = 49
+
+Class levels:
+         f/r/w  bab  feats
+
+         13/7/7  4
+      
+cloak    1/1/1
+
+base     4/1/2
+rng      2/2/0   1 favored enemy: human
+fighter  2/0/0   1 brutal throw
+fighter  1/0/0   1 quick draw
+monk     2/2/2   0 grapple
+monk     1/1/1   1 evasion, combat reflexes
+
+Improvised weapon dam (CWar160):
+<2lb 1d3
+<5lb 1d4
+<10  1d6
+<25  1d8
+<50  2d6
+<100 3d6
+<200 4d6
+<400 5d6
+<600 6d6
+<800 7d6
+
+
+Large:
+<20lb 1H weapon
+<100lb 2H weapon
+(double per size catagory)
+
+-----------------------------------
+    +10 Strength, -2 Dexterity, +4 Constitution, -4 Intelligence, -4 Charisma.
+    Large size. -1 penalty to Armor Class, -1 penalty on attack rolls, -4 penalty on Hide checks, +4 bonus on grapple checks, lifting and carrying limits double those of Medium characters.
+    Space/Reach: 10 feet/10 feet.
+    An ogre’s base land speed is 40 feet.
+    Darkvision out to 60 feet.
+    Racial Hit Dice: An ogre begins with four levels of giant, which provide 4d8 Hit Dice, a base attack bonus of +3, and base saving throw bonuses of Fort +4, Ref +1, and Will +1.
+    Racial Skills: An ogre’s giant levels give it skill points equal to 7 × (2 + Int modifier, minimum 1). Its class skills are Climb, Listen, and Spot.
+    Racial Feats: An ogre’s giant levels give it two feats.
+    Weapon and Armor Proficiency: An ogre is automatically proficient with simple weapons, martial weapons, light and medium armor, and shields.
+    +5 natural armor bonus.
+    Automatic Languages: Common, Giant. Bonus Languages: Dwarven, Orc, Goblin, Terran.
+    Favored Class: Barbarian.
+    Level adjustment +2.
+
