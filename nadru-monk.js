@@ -1,6 +1,4 @@
-_ = require('underscore')._;
-
-lvl = 9;
+lvl = 10;
 bab = 6
 basestats = {
     str: 10,
@@ -33,7 +31,7 @@ stats.wis++;
 function mod(stat) { return Math.floor((stat-10)/2); }
 
 // # Hit points
-basehp = mod(basestats.con) * 9 + 8 + 3 + 3 + 7 + 4 + 5 + 4 + 7 + 6;
+basehp = mod(basestats.con) * 9 + 8 + 3 + 3 + 7 + 4 + 5 + 4 + 7 + 6 + 6;
 
 // Saves:
 
@@ -54,14 +52,15 @@ skillbase.tumble = 4;
 
 skillbase.survival = 0;
 skillbase.knownature = 0;
+skillbase.spellcraft = 0;
 
 // druid
-skillbase.concentration += 8;
-skillbase.listen += 8;
-skillbase.spot += 8;
-skillbase.survival += 8;
-skillbase.knownature += 8;
-skillbase.survival += 4; skillbase.knownature += 4;
+skillbase.concentration += 9;
+skillbase.listen += 9;
+skillbase.spot += 9;
+skillbase.survival += 9;
+skillbase.knownature += 9;
+skillbase.survival += 4; skillbase.knownature += 4; skillbase.spellcraft += 1;
 
 skillbase.wildempathy = lvl;
 
@@ -72,6 +71,7 @@ skillability = {
     movesilent: "dex",
     tumble: "dex",
     sensemotives: "wis",
+    spellcraft: "int",
     listen: "wis",
     spot: "wis",
     survival: "wis",
@@ -107,8 +107,10 @@ feats = {
 // lvl6
 "Natural spell": "casting in wild shape",
 // lvl9
-"Leadership": "attract cohort and followers"}
-class = {
+"offset material": "",
+//"Leadership": "attract cohort and followers"}
+}
+classes = {
 // monk
 "flurry of blows" : "-2/-2 attack instead of +0",
 "improved grapple" : "no attck of opportunity when starting a grapple; +4 grapple bonus",
@@ -122,7 +124,40 @@ class = {
 "trackless step": "untrackable",
 "resist natures lure ": "+4 save vs. fey spell-like ability",
 "wild shape": "3 times per day 8hrs, small, medium, large. heal like a days rest when shifting",
+"venom immunity": "Immune to all poison"
 }
+
+spelllist = [
+"0 Light: Object shines like a torch.",
+"0 Light: Object shines like a torch.",
+"0 Light: Object shines like a torch.",
+"0 Detect Magic: Detects spells and magic items within 60 ft.",
+"0 Create Water: Creates 2 gallons/level of pure water.",
+"0 Cure Minor Wounds: Cures 1 point of damage.",
+
+"1 Obscuring Mist: Fog surrounds you.",
+"1 Endure Elements: Exist comfortably in hot or cold environments.",
+"1 Speak with Animals: You can communicate with animals.",
+"1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.",
+"1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.",
+
+"2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
+"2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
+"2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
+"2 Bull's Strength: Subject gains +4 to Str for 1 min./level.",
+"2 Tree Shape: You look exactly like a tree for 1 hour/level.",
+
+"3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
+"3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
+"Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).",
+"3 Call Lightning: Calls down lightning bolts (3d6 per bolt) from sky 9 bolts within 9min.",
+
+"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
+"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
+"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
+
+"5 Wall of Thorns: Thorns damage anyone who tries to pass. ",
+];
 
 spells = {
 "0 x 6": 
@@ -133,7 +168,7 @@ spells = {
 "Guidance: +1 on one attack roll, saving throw, or skill check.",
 "Light: Object shines like a torch.",
 "Mending: Makes minor repairs on an object.",
-
+"",
 "Detect Poison: Detects poison in one creature or object.",
 "Flare: Dazzles one creature (–1 penalty on attack rolls).",
 "Know Direction: You discern north.",
@@ -149,7 +184,7 @@ spells = {
 "Entangle: Plants entangle everyone in 40-ft.-radius.",
 "Obscuring Mist: Fog surrounds you.",
 "Speak with Animals: You can communicate with animals.",
-
+"",
 "Cure Light Wounds: Cures 1d8 damage +1/level (max +5).",
 "Produce Flame: 1d6 damage +1/level, touch or thrown.",
 "Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.",
@@ -166,13 +201,13 @@ spells = {
 "Shillelagh: Cudgel or quarterstaff becomes +1 weapon (1d10 damage) for 1 min./level.",
 "Summon Nature's Ally I: Calls creature to fight.",
 ],
-"2 x 3+1": 
+"2 x 4+1": 
 [
-"Barkskin: Grants +1 (+1/3lvl, max +5 total) (+3) enhancement to natural armor. 10 min/lvl",
+"Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
 "Bear's Endurance: Subject gains +4 to Con for 1 min./level.",
 "Gust of Wind: Blows away or knocks down smaller creatures.",
 "Wood Shape: Rearranges wooden objects to suit you.",
-
+"",
 "Bull's Strength: Subject gains +4 to Str for 1 min./level.",
 "Resist Energy: Ignores 10 (or more) points of damage/attack from specified energy type.",
 "Animal Messenger: Sends a Tiny animal to a specific place.",
@@ -201,8 +236,8 @@ spells = {
 "Plant Growth: Grows vegetation, improves crops.",
 "Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
 "Stone Shape: Sculpts stone into any shape.",
-"Call Lightning: Calls down lightning bolts (3d6 per bolt) from sky 8 bolts within 8min.",
-
+"Call Lightning: Calls down lightning bolts (3d6 per bolt) from sky 9 bolts within 9min.",
+"",
 "Snare: Creates a magic booby trap.",
 "Wind Wall: Deflects arrows, smaller creatures, and gases.",
 "Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).",
@@ -227,7 +262,7 @@ spells = {
 "ScryingF: Spies on subject from a distance.",
 "Flame Strike: Smite foes with Divine fire (1d6/level damage).",
 "Freedom of Movement: Subject moves normally despite impediments.",
-
+"",
 "Air Walk: Subject treads on air as if solid (climb at 45-degree angle).",
 "Antiplant Shell: Keeps animated plants at bay.",
 "Blight: Withers one plant or deals 1d6/level damage to plant creature.",
@@ -242,6 +277,29 @@ spells = {
 "Rusting Grasp: Your touch corrodes iron and alloys.",
 "Spike Stones: Creatures in area take 1d8 damage, may be slowed.",
 "Summon Nature's Ally IV: Calls creature to fight.",
+],
+"5 x 1+0": 
+[
+"Wall of Thorns: Thorns damage anyone who tries to pass. ",
+"Animal Growth: One animal/two levels doubles in size.",
+"Baleful Polymorph: Transforms subject into harmless animal.",
+"Call Lightning Storm: As call lightning, but 5d6 damage per bolt.",
+"Control Winds: Change wind direction and speed.",
+"Commune with Nature: Learn about terrain for 1 mile/level.",
+"Tree Stride: Step from one tree to another far away.",
+"",
+"Atonement: Removes burden of misdeeds from subject.",
+"AwakenX: Animal or tree gains human intellect.",
+"Cure Critical Wounds: Cures 4d8 damage +1/level (max +20).",
+"Death Ward: Grants immunity to all death spells and negative energy effects.",
+"HallowM: Designates location as holy.",
+"Insect Plague: Locust swarms attack creatures.",
+"StoneskinM: Ignore 10 points of damage per attack.",
+"Summon Nature's Ally V: Calls creature to fight.",
+"Transmute Mud to Rock: Transforms two 10-ft. cubes per level.",
+"Transmute Rock to Mud: Transforms two 10-ft. cubes per level.",
+"UnhallowM: Designates location as unholy.",
+"Wall of Fire: Deals 2d4 fire damage out to 10 ft. and 1d4 out to 20 ft. Passing through wall deals 2d6 damage +1/level.",
 ],
 
 }
@@ -265,7 +323,7 @@ function ac() {
 function saves() {
     return {
 	fortitude: mod(stats.con) +2 + 6,
-	reflex: mod(stats.dex) +2+ 2,
+	reflex: mod(stats.dex) +2+ 3,
 	will: mod(stats.wis) +2+ 6,
     }
 }
@@ -295,7 +353,7 @@ console.log("Human");
 print();
 console.log("hp:", basehp);
 console.log("feats:", feats);
-console.log("class:", class);
+console.log("class:", classes);
 console.log("spells:", spells);
 
 // wild shapes
@@ -394,4 +452,22 @@ specials = [
     "bite +0 1d8"
 ]
 print();
+
+
+console.log("\n\ndire hawk");
+move = "10ft walk / 80ft fly"
+stats = Object.create(stats);
+stats.str = 12;
+stats.dex = 22;
+stats.con = 15;
+size = 0;
+naturalac = 3;
+specials = [
+	"claw: +0 1d4+1",
+	"claw: +0 1d4+1",
+	"bite: -5 1d6",
+    "Skills: Dire hawk have a +8 racial bonus on Spot checks in daylight. "
+]
+print();
+console.log(spelllist);
 

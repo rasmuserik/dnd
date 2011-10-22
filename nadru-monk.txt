@@ -7,27 +7,28 @@ int 13 1
 cha 13 1
 move: 30ft
 initiative:  4
-skills: { concentration: 15,
-  listen: 16,
-  spot: 16,
+skills: { concentration: 16,
+  listen: 17,
+  spot: 17,
   movesilent: 4,
   hide: 4,
   tumble: 4,
-  survival: 20,
-  knownature: 15,
-  wildempathy: 10 }
-saves: { fortitude: 11, reflex: 4, will: 12 }
+  survival: 21,
+  knownature: 16,
+  spellcraft: 2,
+  wildempathy: 11 }
+saves: { fortitude: 11, reflex: 5, will: 12 }
 ac: { touch: 14, flatfooted: 14, normal: 14 }
 attack: + 6
 grapple:  10
 dambonus: 0
 specials: [ 'unarmed monk: +0 1d6' ]
-hp: 74
+hp: 80
 feats: { 'Spell Focus Conjuration': '+1 difficulty class',
   'improved initiative': 'initiative +4',
   'Augment Summoning': '+4con +4str to summons',
   'Natural spell': 'casting in wild shape',
-  Leadership: 'attract cohort and followers' }
+  'offset material': '' }
 class: { 'flurry of blows': '-2/-2 attack instead of +0',
   'improved grapple': 'no attck of opportunity when starting a grapple; +4 grapple bonus',
   'unarmed strike': '1d6 unarmed attack lethal or nonlethal',
@@ -38,7 +39,8 @@ class: { 'flurry of blows': '-2/-2 attack instead of +0',
   'woodland stride': 'normal speed in undergrowth',
   'trackless step': 'untrackable',
   'resist natures lure ': '+4 save vs. fey spell-like ability',
-  'wild shape': '3 times per day 8hrs, small, medium, large. heal like a days rest when shifting' }
+  'wild shape': '3 times per day 8hrs, small, medium, large. heal like a days rest when shifting',
+  'venom immunity': 'Immune to all poison' }
 spells: { '0 x 6': 
    [ 'Create Water: Creates 2 gallons/level of pure water.',
      'Cure Minor Wounds: Cures 1 point of damage.',
@@ -46,6 +48,7 @@ spells: { '0 x 6':
      'Guidance: +1 on one attack roll, saving throw, or skill check.',
      'Light: Object shines like a torch.',
      'Mending: Makes minor repairs on an object.',
+     '',
      'Detect Poison: Detects poison in one creature or object.',
      'Flare: Dazzles one creature (–1 penalty on attack rolls).',
      'Know Direction: You discern north.',
@@ -59,6 +62,7 @@ spells: { '0 x 6':
      'Entangle: Plants entangle everyone in 40-ft.-radius.',
      'Obscuring Mist: Fog surrounds you.',
      'Speak with Animals: You can communicate with animals.',
+     '',
      'Cure Light Wounds: Cures 1d8 damage +1/level (max +5).',
      'Produce Flame: 1d6 damage +1/level, touch or thrown.',
      'Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.',
@@ -74,11 +78,12 @@ spells: { '0 x 6':
      'Magic Stone: Three stones gain +1 on attack rolls, deal 1d6+1 damage.',
      'Shillelagh: Cudgel or quarterstaff becomes +1 weapon (1d10 damage) for 1 min./level.',
      'Summon Nature\'s Ally I: Calls creature to fight.' ],
-  '2 x 3+1': 
-   [ 'Barkskin: Grants +1 (+1/3lvl, max +5 total) (+3) enhancement to natural armor. 10 min/lvl',
+  '2 x 4+1': 
+   [ 'Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
      'Bear\'s Endurance: Subject gains +4 to Con for 1 min./level.',
      'Gust of Wind: Blows away or knocks down smaller creatures.',
      'Wood Shape: Rearranges wooden objects to suit you.',
+     '',
      'Bull\'s Strength: Subject gains +4 to Str for 1 min./level.',
      'Resist Energy: Ignores 10 (or more) points of damage/attack from specified energy type.',
      'Animal Messenger: Sends a Tiny animal to a specific place.',
@@ -105,7 +110,8 @@ spells: { '0 x 6':
    [ 'Plant Growth: Grows vegetation, improves crops.',
      'Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ',
      'Stone Shape: Sculpts stone into any shape.',
-     'Call Lightning: Calls down lightning bolts (3d6 per bolt) from sky 8 bolts within 8min.',
+     'Call Lightning: Calls down lightning bolts (3d6 per bolt) from sky 9 bolts within 9min.',
+     '',
      'Snare: Creates a magic booby trap.',
      'Wind Wall: Deflects arrows, smaller creatures, and gases.',
      'Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).',
@@ -128,6 +134,7 @@ spells: { '0 x 6':
    [ 'ScryingF: Spies on subject from a distance.',
      'Flame Strike: Smite foes with Divine fire (1d6/level damage).',
      'Freedom of Movement: Subject moves normally despite impediments.',
+     '',
      'Air Walk: Subject treads on air as if solid (climb at 45-degree angle).',
      'Antiplant Shell: Keeps animated plants at bay.',
      'Blight: Withers one plant or deals 1d6/level damage to plant creature.',
@@ -141,7 +148,28 @@ spells: { '0 x 6':
      'Repel Vermin: Insects, spiders, and other vermin stay 10 ft. away.',
      'Rusting Grasp: Your touch corrodes iron and alloys.',
      'Spike Stones: Creatures in area take 1d8 damage, may be slowed.',
-     'Summon Nature\'s Ally IV: Calls creature to fight.' ] }
+     'Summon Nature\'s Ally IV: Calls creature to fight.' ],
+  '5 x 1+0': 
+   [ 'Wall of Thorns: Thorns damage anyone who tries to pass. ',
+     'Animal Growth: One animal/two levels doubles in size.',
+     'Baleful Polymorph: Transforms subject into harmless animal.',
+     'Call Lightning Storm: As call lightning, but 5d6 damage per bolt.',
+     'Control Winds: Change wind direction and speed.',
+     'Commune with Nature: Learn about terrain for 1 mile/level.',
+     'Tree Stride: Step from one tree to another far away.',
+     '',
+     'Atonement: Removes burden of misdeeds from subject.',
+     'AwakenX: Animal or tree gains human intellect.',
+     'Cure Critical Wounds: Cures 4d8 damage +1/level (max +20).',
+     'Death Ward: Grants immunity to all death spells and negative energy effects.',
+     'HallowM: Designates location as holy.',
+     'Insect Plague: Locust swarms attack creatures.',
+     'StoneskinM: Ignore 10 points of damage per attack.',
+     'Summon Nature\'s Ally V: Calls creature to fight.',
+     'Transmute Mud to Rock: Transforms two 10-ft. cubes per level.',
+     'Transmute Rock to Mud: Transforms two 10-ft. cubes per level.',
+     'UnhallowM: Designates location as unholy.',
+     'Wall of Fire: Deals 2d4 fire damage out to 10 ft. and 1d4 out to 20 ft. Passing through wall deals 2d6 damage +1/level.' ] }
 
 
 dire lion
@@ -153,16 +181,17 @@ int 13 1
 cha 13 1
 move: 40ft walk
 initiative:  6
-skills: { concentration: 15,
-  listen: 16,
-  spot: 16,
+skills: { concentration: 16,
+  listen: 17,
+  spot: 17,
   movesilent: 6,
   hide: 2,
   tumble: 6,
-  survival: 20,
-  knownature: 15,
-  wildempathy: 10 }
-saves: { fortitude: 11, reflex: 6, will: 12 }
+  survival: 21,
+  knownature: 16,
+  spellcraft: 2,
+  wildempathy: 11 }
+saves: { fortitude: 11, reflex: 7, will: 12 }
 ac: { touch: 15, flatfooted: 17, normal: 19 }
 attack: + 12
 grapple:  21
@@ -185,16 +214,17 @@ int 13 1
 cha 13 1
 move: 50ft walk
 initiative:  6
-skills: { concentration: 15,
-  listen: 16,
-  spot: 16,
+skills: { concentration: 16,
+  listen: 17,
+  spot: 17,
   movesilent: 6,
   hide: 2,
   tumble: 6,
-  survival: 20,
-  knownature: 15,
-  wildempathy: 10 }
-saves: { fortitude: 11, reflex: 6, will: 12 }
+  survival: 21,
+  knownature: 16,
+  spellcraft: 2,
+  wildempathy: 11 }
+saves: { fortitude: 11, reflex: 7, will: 12 }
 ac: { touch: 15, flatfooted: 16, normal: 18 }
 attack: + 12
 grapple:  21
@@ -213,16 +243,17 @@ int 13 1
 cha 13 1
 move: 40ft walk
 initiative:  5
-skills: { concentration: 16,
-  listen: 16,
-  spot: 16,
+skills: { concentration: 17,
+  listen: 17,
+  spot: 17,
   movesilent: 5,
   hide: 1,
   tumble: 5,
-  survival: 20,
-  knownature: 15,
-  wildempathy: 10 }
-saves: { fortitude: 12, reflex: 5, will: 12 }
+  survival: 21,
+  knownature: 16,
+  spellcraft: 2,
+  wildempathy: 11 }
+saves: { fortitude: 12, reflex: 6, will: 12 }
 ac: { touch: 14, flatfooted: 18, normal: 19 }
 attack: + 13
 grapple:  22
@@ -243,16 +274,17 @@ int 13 1
 cha 13 1
 move: 30ft walk
 initiative:  4
-skills: { concentration: 17,
-  listen: 16,
-  spot: 16,
+skills: { concentration: 18,
+  listen: 17,
+  spot: 17,
   movesilent: 4,
   hide: 0,
   tumble: 4,
-  survival: 20,
-  knownature: 15,
-  wildempathy: 10 }
-saves: { fortitude: 13, reflex: 4, will: 12 }
+  survival: 21,
+  knownature: 16,
+  spellcraft: 2,
+  wildempathy: 11 }
+saves: { fortitude: 13, reflex: 5, will: 12 }
 ac: { touch: 13, flatfooted: 20, normal: 20 }
 attack: + 13
 grapple:  22
@@ -269,16 +301,17 @@ int 13 1
 cha 13 1
 move: 10ft walk / 80ft fly
 initiative:  6
-skills: { concentration: 13,
-  listen: 16,
-  spot: 16,
+skills: { concentration: 14,
+  listen: 17,
+  spot: 17,
   movesilent: 6,
   hide: 10,
   tumble: 6,
-  survival: 20,
-  knownature: 15,
-  wildempathy: 10 }
-saves: { fortitude: 9, reflex: 6, will: 12 }
+  survival: 21,
+  knownature: 16,
+  spellcraft: 2,
+  wildempathy: 11 }
+saves: { fortitude: 9, reflex: 7, will: 12 }
 ac: { touch: 17, flatfooted: 16, normal: 18 }
 attack: + 7
 grapple:  6
@@ -298,18 +331,73 @@ int 13 1
 cha 13 1
 move: 20ft walk / 40ft fly
 initiative:  10
-skills: { concentration: 15,
-  listen: 16,
-  spot: 16,
+skills: { concentration: 16,
+  listen: 17,
+  spot: 17,
   movesilent: 10,
   hide: 6,
   tumble: 10,
-  survival: 20,
-  knownature: 15,
-  wildempathy: 10 }
-saves: { fortitude: 11, reflex: 10, will: 12 }
+  survival: 21,
+  knownature: 16,
+  spellcraft: 2,
+  wildempathy: 11 }
+saves: { fortitude: 11, reflex: 11, will: 12 }
 ac: { touch: 19, flatfooted: 18, normal: 24 }
 attack: + 8
 grapple:  17
 dambonus: 3
 specials: [ 'bite +0 1d8' ]
+
+
+dire hawk
+str 12 1
+dex 22 6
+con 15 2
+wis 19 4
+int 13 1
+cha 13 1
+move: 10ft walk / 80ft fly
+initiative:  10
+skills: { concentration: 15,
+  listen: 17,
+  spot: 17,
+  movesilent: 10,
+  hide: 10,
+  tumble: 10,
+  survival: 21,
+  knownature: 16,
+  spellcraft: 2,
+  wildempathy: 11 }
+saves: { fortitude: 10, reflex: 11, will: 12 }
+ac: { touch: 20, flatfooted: 17, normal: 23 }
+attack: + 7
+grapple:  11
+dambonus: 1
+specials: [ 'claw: +0 1d4+1',
+  'claw: +0 1d4+1',
+  'bite: -5 1d6',
+  'Skills: Dire hawk have a +8 racial bonus on Spot checks in daylight. ' ]
+[ '0 Light: Object shines like a torch.',
+  '0 Light: Object shines like a torch.',
+  '0 Light: Object shines like a torch.',
+  '0 Detect Magic: Detects spells and magic items within 60 ft.',
+  '0 Create Water: Creates 2 gallons/level of pure water.',
+  '0 Cure Minor Wounds: Cures 1 point of damage.',
+  '1 Obscuring Mist: Fog surrounds you.',
+  '1 Endure Elements: Exist comfortably in hot or cold environments.',
+  '1 Speak with Animals: You can communicate with animals.',
+  '1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.',
+  '1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.',
+  '2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
+  '2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
+  '2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
+  '2 Bull\'s Strength: Subject gains +4 to Str for 1 min./level.',
+  '2 Tree Shape: You look exactly like a tree for 1 hour/level.',
+  '3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ',
+  '3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ',
+  'Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).',
+  '3 Call Lightning: Calls down lightning bolts (3d6 per bolt) from sky 9 bolts within 9min.',
+  '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
+  '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
+  '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
+  '5 Wall of Thorns: Thorns damage anyone who tries to pass. ' ]
