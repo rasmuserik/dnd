@@ -377,12 +377,40 @@ specials: [ 'claw: +0 1d4+1',
   'claw: +0 1d4+1',
   'bite: -5 1d6',
   'Skills: Dire hawk have a +8 racial bonus on Spot checks in daylight. ' ]
+
+
+large viper
+str 10 0
+dex 17 3
+con 11 0
+wis 19 4
+int 13 1
+cha 13 1
+move: 20ft walk/climb/swim
+initiative:  7
+skills: { concentration: 13,
+  listen: 17,
+  spot: 17,
+  movesilent: 7,
+  hide: 7,
+  tumble: 7,
+  survival: 21,
+  knownature: 16,
+  profession_herbalist_poisonmaking: 5,
+  wildempathy: 11 }
+saves: { fortitude: 8, reflex: 8, will: 12 }
+ac: { touch: 17, flatfooted: 17, normal: 20 }
+attack: + 6
+grapple:  10
+dambonus: 0
+specials: [ 'bite: +0 1d4+poison',
+  'poison: dc11fort 1d6/1d6 con' ]
 [ '0 Light: Object shines like a torch.',
   '0 Light: Object shines like a torch.',
   '0 Light: Object shines like a torch.',
-  '0 Detect Magic: Detects spells and magic items within 60 ft.',
-  '0 Create Water: Creates 2 gallons/level of pure water.',
-  '0 Cure Minor Wounds: Cures 1 point of damage.',
+  '0 Detect Poison: Detects poison in one creature or object.',
+  '0 Detect Poison: Detects poison in one creature or object.',
+  '0 Detect Poison: Detects poison in one creature or object.',
   '1 Obscuring Mist: Fog surrounds you.',
   '1 Endure Elements: Exist comfortably in hot or cold environments.',
   '1 Speak with Animals: You can communicate with animals.',

@@ -131,9 +131,9 @@ spelllist = [
 "0 Light: Object shines like a torch.",
 "0 Light: Object shines like a torch.",
 "0 Light: Object shines like a torch.",
-"0 Detect Magic: Detects spells and magic items within 60 ft.",
-"0 Create Water: Creates 2 gallons/level of pure water.",
-"0 Cure Minor Wounds: Cures 1 point of damage.",
+"0 Detect Poison: Detects poison in one creature or object.",
+"0 Detect Poison: Detects poison in one creature or object.",
+"0 Detect Poison: Detects poison in one creature or object.",
 
 "1 Obscuring Mist: Fog surrounds you.",
 "1 Endure Elements: Exist comfortably in hot or cold environments.",
@@ -149,7 +149,7 @@ spelllist = [
 
 "3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
 "3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
-"Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).",
+"3 Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).",
 "3 Call Lightning: Calls down lightning bolts (3d6 per bolt) from sky 9 bolts within 9min.",
 
 "4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
@@ -467,6 +467,20 @@ specials = [
 	"claw: +0 1d4+1",
 	"bite: -5 1d6",
     "Skills: Dire hawk have a +8 racial bonus on Spot checks in daylight. "
+]
+print();
+
+console.log("\n\nlarge viper");
+move = "20ft walk/climb/swim"
+stats = Object.create(stats);
+stats.str = 10;
+stats.dex = 17;
+stats.con = 11;
+size = 0;
+naturalac = 3;
+specials = [
+	"bite: +0 1d4+poison",
+    "poison: dc11fort 1d6/1d6 con"
 ]
 print();
 console.log(spelllist);
