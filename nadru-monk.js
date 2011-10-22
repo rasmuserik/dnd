@@ -52,7 +52,7 @@ skillbase.tumble = 4;
 
 skillbase.survival = 0;
 skillbase.knownature = 0;
-skillbase.spellcraft = 0;
+skillbase.profession_herbalist_poisonmaking = 0;
 
 // druid
 skillbase.concentration += 9;
@@ -60,7 +60,7 @@ skillbase.listen += 9;
 skillbase.spot += 9;
 skillbase.survival += 9;
 skillbase.knownature += 9;
-skillbase.survival += 4; skillbase.knownature += 4; skillbase.spellcraft += 1;
+skillbase.survival += 4; skillbase.knownature += 4; skillbase.profession_herbalist_poisonmaking += 1;
 
 skillbase.wildempathy = lvl;
 
@@ -71,7 +71,7 @@ skillability = {
     movesilent: "dex",
     tumble: "dex",
     sensemotives: "wis",
-    spellcraft: "int",
+    profession_herbalist_poisonmaking: "wis",
     listen: "wis",
     spot: "wis",
     survival: "wis",
