@@ -403,8 +403,7 @@ ac: { touch: 17, flatfooted: 17, normal: 20 }
 attack: + 6
 grapple:  10
 dambonus: 0
-specials: [ 'bite: +0 1d4+poison',
-  'poison: dc11fort 1d6/1d6 con' ]
+specials: [ 'bite: +0 1d4+poison', 'poison: dc11fort 1d6/1d6 con' ]
 [ '0 Light: Object shines like a torch.',
   '0 Light: Object shines like a torch.',
   '0 Light: Object shines like a torch.',
@@ -423,9 +422,10 @@ specials: [ 'bite: +0 1d4+poison',
   '2 Tree Shape: You look exactly like a tree for 1 hour/level.',
   '3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ',
   '3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ',
-  'Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).',
+  '3 Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).',
   '3 Call Lightning: Calls down lightning bolts (3d6 per bolt) from sky 9 bolts within 9min.',
   '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
   '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
   '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
   '5 Wall of Thorns: Thorns damage anyone who tries to pass. ' ]
+poison: dc15, 1d4 con

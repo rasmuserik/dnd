@@ -1,25 +1,32 @@
 Race: Ogre
-str: 15 + 10 + 1 = 26 (+8)
+str: 15 + 10 + 2 + 10 = 37 (+13)
 dex: 14 - 2 = 12 (+1)
 con: 14 + 4 = 18 (+4)
 int: 11 - 4 = 7 (-2)
 wis: 14 = 14 (+2)
 cha: 15 - 4 = 11 (+0)
 
-HP: 49: 9+2
-AC: 10 + 1(dex) - 1(size) + 5(natural armor) + ??(armor) = 15+armor = 24
-Melee+throw: 4(bab) - 1(size) + 8(str) = 11
-Ranged: 4(bab) - 1(size) + 1(dex) = 4
+Items:
+Golem Armor! (full-plate AC+10, str+10, immune to mind-affecting effects, poison, disease, and similar effects. He or she is not subject to critical hits, nonlethal damage, ability damage, energy drain, or death from massive damage. DR 15/adamantine, larger)
+
+amulet nat prot
+
+back of tricks, gray
+
+HP: 65: 
+AC: 10 + 1(dex) - 2(size) + 5(natural armor) + ??(armor) = 15+(fullplate +8 +10) + (amulet of natural +1) = 35, DR15/adamantine
+Melee+throw: 5(bab) - 2(size) + 13(str) = 16/11
+Ranged: 5(bab) - 2(size) + 1(dex) = 5
 Vision: 60ft dark + lowlight
 Movement: 30ft (40ft. unarmed)
-Grapple: 8(str) + 4(size) + 4(improved grapple) = 16
+Grapple: 13(str) + 8(size) + 4(improved grapple) = 25
 
 Skills: 
 move silently 1 + 4 = 5
 spot 2 + 4 + 2 = 8
 listen 2 + 4 + 2 = 8
 survival 2 + 4 = 6
-jump 8 + 2  = 10
+jump 9 + 2  = 11
 
 Favored enemy: Human +2 dam
 
@@ -34,10 +41,10 @@ Initiative: +5
 
 Gear(?):
 
-Masterwork large Greataxe
-attack: 12, dam: 3d6 + 12(str*1.5)
 Masterwork huge Greataxe
-attack: 10, dam: 4d6 + 12(str*1.5)
+attack: 16, dam: 4d6 + 19(str*1.5)
+Masterwork gargantum Greataxe
+attack: 14, dam: 6d6 + 19(str*1.5)
 
 Full plate
 total ac: 23
@@ -58,28 +65,24 @@ Flaws:
 Naive (-4 on all Bluff and Sense Motive checks.)
 Idiot (-2 on intbased skills)
 
-Items:
-Full Plate Armor
-amulet nat prot
-back of tricks, gray
 
 
-
-HP: 8+7+5+5+4 + 5*4 = 49
+HP: 8+7+5+5+4+12 + 6*4 = 65
 
 Class levels:
          f/r/w  bab  feats
 
-         13/7/7  4
+         15/7/6  5
       
 cloak    1/1/1
 
 base     4/1/2
 rng      2/2/0   1 favored enemy: human
-fighter  2/0/0   1 brutal throw
-fighter  1/0/0   1 quick draw
 monk     2/2/2   0 grapple
 monk     1/1/1   1 evasion, combat reflexes
+fighter  2/0/0   1 brutal throw
+fighter  1/0/0   1 quick draw
+barb     2/0/0   1 fast movement, rage
 
 Improvised weapon dam (CWar160):
 <2lb 1d3

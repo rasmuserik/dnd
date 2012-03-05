@@ -485,3 +485,4 @@ specials = [
 print();
 console.log(spelllist);
 
+console.log("poison: dc15, 1d4 con");
