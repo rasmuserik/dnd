@@ -1,5 +1,5 @@
-lvl = 10;
-bab = 6
+lvl = 11;
+bab = 7
 basestats = {
     str: 10,
     dex: 11,
@@ -322,9 +322,9 @@ function ac() {
 // saves
 function saves() {
     return {
-	fortitude: mod(stats.con) +2 + 6,
+	fortitude: mod(stats.con) +2 + 7,
 	reflex: mod(stats.dex) +2+ 3,
-	will: mod(stats.wis) +2+ 6,
+	will: mod(stats.wis) +2+ 7,
     }
 }
 // movement

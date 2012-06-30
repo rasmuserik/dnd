@@ -1,0 +1,34 @@
+hp: 80-36
+
+0th.
+- x light
+- light
+- light
+- light
+- detect poison
+- detect poison
+1th.
+- obscuring mist 
+- faeri fire
+- faeri fire
+- x cure-light
+- cure-light
+2th.
+- barkskin
+- barkskin
+- x barkskin
+- x barkskin
+- x barkskin
+3th.
+- x great magic-fang
+- x great magic-fang
+- x cure moderate
+- x cure moderate
+4th.
+- x flame-strike
+- x flame-strike
+- x flame-strike
+- x flame-strike 
+5th.
+- x animal growth
+- x wall-of-thorns

@@ -16,11 +16,11 @@ skills: { concentration: 16,
   survival: 21,
   knownature: 16,
   profession_herbalist_poisonmaking: 5,
-  wildempathy: 11 }
-saves: { fortitude: 11, reflex: 5, will: 12 }
+  wildempathy: 12 }
+saves: { fortitude: 12, reflex: 5, will: 13 }
 ac: { touch: 14, flatfooted: 14, normal: 14 }
-attack: + 6
-grapple:  10
+attack: + 7
+grapple:  11
 dambonus: 0
 specials: [ 'unarmed monk: +0 1d6' ]
 hp: 80
@@ -190,11 +190,11 @@ skills: { concentration: 16,
   survival: 21,
   knownature: 16,
   profession_herbalist_poisonmaking: 5,
-  wildempathy: 11 }
-saves: { fortitude: 11, reflex: 7, will: 12 }
+  wildempathy: 12 }
+saves: { fortitude: 12, reflex: 7, will: 13 }
 ac: { touch: 15, flatfooted: 17, normal: 19 }
-attack: + 12
-grapple:  21
+attack: + 13
+grapple:  22
 dambonus: 7
 specials: [ 'claw: +0 1d6',
   'claw: +0 1d6',
@@ -223,11 +223,11 @@ skills: { concentration: 16,
   survival: 21,
   knownature: 16,
   profession_herbalist_poisonmaking: 5,
-  wildempathy: 11 }
-saves: { fortitude: 11, reflex: 7, will: 12 }
+  wildempathy: 12 }
+saves: { fortitude: 12, reflex: 7, will: 13 }
 ac: { touch: 15, flatfooted: 16, normal: 18 }
-attack: + 12
-grapple:  21
+attack: + 13
+grapple:  22
 dambonus: 7
 specials: [ 'bite: 0 1d8',
   'Trip (Ex): A dire wolf that hits with a bite attack can attempt to trip its opponent (+11 check modifier) as a free action without making a touch attack or provoking an attack of opportunity. If the attempt fails, the opponent cannot react to trip the dire wolf.',
@@ -252,11 +252,11 @@ skills: { concentration: 17,
   survival: 21,
   knownature: 16,
   profession_herbalist_poisonmaking: 5,
-  wildempathy: 11 }
-saves: { fortitude: 12, reflex: 6, will: 12 }
+  wildempathy: 12 }
+saves: { fortitude: 13, reflex: 6, will: 13 }
 ac: { touch: 14, flatfooted: 18, normal: 19 }
-attack: + 13
-grapple:  22
+attack: + 14
+grapple:  23
 dambonus: 8
 specials: [ 'claw: +0 1d8',
   'claw: +0 1d8',
@@ -283,11 +283,11 @@ skills: { concentration: 18,
   survival: 21,
   knownature: 16,
   profession_herbalist_poisonmaking: 5,
-  wildempathy: 11 }
-saves: { fortitude: 13, reflex: 5, will: 12 }
+  wildempathy: 12 }
+saves: { fortitude: 14, reflex: 5, will: 13 }
 ac: { touch: 13, flatfooted: 20, normal: 20 }
-attack: + 13
-grapple:  22
+attack: + 14
+grapple:  23
 dambonus: 8
 specials: [ 'gore: +0 2d6', 'powerful charge (double dam)' ]
 
@@ -310,11 +310,11 @@ skills: { concentration: 14,
   survival: 21,
   knownature: 16,
   profession_herbalist_poisonmaking: 5,
-  wildempathy: 11 }
-saves: { fortitude: 9, reflex: 7, will: 12 }
+  wildempathy: 12 }
+saves: { fortitude: 10, reflex: 7, will: 13 }
 ac: { touch: 17, flatfooted: 16, normal: 18 }
-attack: + 7
-grapple:  6
+attack: + 8
+grapple:  7
 dambonus: 0
 specials: [ 'talon: +0 1d4',
   'talon: +0 1d4',
@@ -340,11 +340,11 @@ skills: { concentration: 16,
   survival: 21,
   knownature: 16,
   profession_herbalist_poisonmaking: 5,
-  wildempathy: 11 }
-saves: { fortitude: 11, reflex: 11, will: 12 }
+  wildempathy: 12 }
+saves: { fortitude: 12, reflex: 11, will: 13 }
 ac: { touch: 19, flatfooted: 18, normal: 24 }
-attack: + 8
-grapple:  17
+attack: + 9
+grapple:  18
 dambonus: 3
 specials: [ 'bite +0 1d8' ]
 
@@ -367,11 +367,11 @@ skills: { concentration: 15,
   survival: 21,
   knownature: 16,
   profession_herbalist_poisonmaking: 5,
-  wildempathy: 11 }
-saves: { fortitude: 10, reflex: 11, will: 12 }
+  wildempathy: 12 }
+saves: { fortitude: 11, reflex: 11, will: 13 }
 ac: { touch: 20, flatfooted: 17, normal: 23 }
-attack: + 7
-grapple:  11
+attack: + 8
+grapple:  12
 dambonus: 1
 specials: [ 'claw: +0 1d4+1',
   'claw: +0 1d4+1',
@@ -397,11 +397,11 @@ skills: { concentration: 13,
   survival: 21,
   knownature: 16,
   profession_herbalist_poisonmaking: 5,
-  wildempathy: 11 }
-saves: { fortitude: 8, reflex: 8, will: 12 }
+  wildempathy: 12 }
+saves: { fortitude: 9, reflex: 8, will: 13 }
 ac: { touch: 17, flatfooted: 17, normal: 20 }
-attack: + 6
-grapple:  10
+attack: + 7
+grapple:  11
 dambonus: 0
 specials: [ 'bite: +0 1d4+poison', 'poison: dc11fort 1d6/1d6 con' ]
 [ '0 Light: Object shines like a torch.',
