@@ -1,0 +1,90 @@
+# Build
+
+
+- abilities
+    - str 12-2-1
+    - dex 11+2-1
+    - con 15+2-1
+    - int 11+0+1
+    - wis 18+0+1
+    - cha 13-2+1 (min 10)
+    - race +2dex +2con -2str -2cha, age:-1/+1, 80 statpoints
+- lvls
+    - 1 cleric
+    - 2 cleric
+    - 3 cleric
+    - 4 cleric
+    - 5 cleric
+    - 6 cleric
+    - 7 cleric
+        - skills (2+int)*10(conc, craft, diplm, heal, know-arc/hist/rel/plan, prof, spellcraft): 30. 4(8)bluff, 4(8)hide, 10conc, 4spellcraft
+    - 8 shadowcraft mage 
+        - cloak-of-shadow (concealment lvl3-magic, hide, not in daylight, enemy attack miss 15% + 5% per shadowcraft lvl) 
+        - req: bluff4 hide4, lvl4-shadow-spell, gnome,3illusion
+        - skills 4+int(bluff, conc, disgu, hide, know arc, silently, perfom, search, spellcraft, spot):
+    - (9 shadowcraft mage silent illusion)
+    - (10 shadowcraft mage shadow illusion)
+    - (11 shadowcraft mage extend illusion)
+    - (12 shadowcraft mage powerful shadow magic)
+    - (13 contemplative)
+- domains
+    - travel
+        - Lvl x freedom of movement
+        - 1 Longstrider: Increases your speed.
+        - 2 Locate Object: Senses direction toward object (specific or type).
+        - 3 Fly: Subject flies at speed of 60 ft.
+        - 4 Dimension Door: Teleports you short distance.
+        - 5 Teleport: Instantly transports you as far as 100 miles/level.
+        - 6 Find the Path: Shows most direct way to a location.
+        - 7 Greater Teleport: As teleport, but no range limit and no off-target arrival.
+        - 8 Phase Door: Creates an invisible passage through wood or stone.
+        - 9 Astral ProjectionM: Projects you and companions onto Astral Plane. 
+    - shadow (spontaneous)
+        - Granted Power: You gain Blind-Fight as a bonus feat.
+        - 1 Obscuring Mist: Fog surrounds you.
+        - 2 Darkness: 20' radius of supernatural shadow.
+        - 3 Deeper Darkness: Object sheds supernatural shadow in 60' radius.
+        - 4 Shadow Conjuration: Mimics conjuration below 4th level, but only 20% real.
+        - 5 Shadow Evocation: Mimics evocation below 5th level, but only 20% real.
+        - 6 Shadow Walk: Step into shadow to travel rapidly.
+        - 7 Shadow Conjuration, Greater: As shadow conjuration, but up to 6th level and 60% real.
+        - 8 Shadow Evocation, Greater: As shadow evocation, but up to 7th level and 60% real.
+        - 9 Shades: As shadow conjuration, but up to 8th level and 80% real.
+- spells
+    - 0 6
+    - 1 4+1
+        - cure light
+        - lesser vigor 1/round, 15 rounds
+        - resurgence
+    - 2 3+1
+        - hold person
+        - locate object
+        - iron silence
+        - shatter
+        - cure moderate wounds
+    - 3 3+1
+        - vigor 2/round, 10+lvl rounds
+        - cure serious wounds
+        - fly
+    - 4 2+1
+        - discern lies
+        - restoration
+        - tongues
+        - dimension door
+- feats
+    - travel devotion - std.move as swift action instead of 5ft. move for 1 min/day or 1min/2rebuke
+    - spell focus illusions
+- variant
+    - spontaneous domain casting (spontaneous shadow instead of inflict + heal/inflict in domain slot) phb2
+- domains
+    - travel
+        - freedom 1 turn/level
+- race
+    - +2dex +2con -2str -2cha
+    - small (+1ac+1atck+4hide 3/4 lift)
+    - speed: 30ft
+    - lowlight+darkvision60ft
+    - +1 racial attack vs kobolds+goblinoids
+    - +4ac dodge vs giant-type (ogres/trolls/giants)
+    - +4 hide/move-silently, +2listen/spot
+    - spelllike: 1/day: silence around self, ghost sound, mage hand, message
