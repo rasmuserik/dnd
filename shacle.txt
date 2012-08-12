@@ -2,13 +2,18 @@
 
 
 - abilities
-    - str 12-2-1
-    - dex 11+2-1
-    - con 15+2-1
-    - int 11+0+1
-    - wis 18+0+1
-    - cha 13-2+1 (min 10)
+    - str 12-2-1= 9 (light:22.5lb,medium:45lb, heavy:67.5lb)
+    - dex 11+2-1= 12
+    - con 15+2-1= 16
+    - int 11+0+1= 12
+    - wis 18+0+1+2= 21
+    - cha 13-2+1= 12
     - race +2dex +2con -2str -2cha, age:-1/+1, 80 statpoints
+- hp: 8+6d8+1d4+3*8 = 8+5+5+7+3+7+5+4+24 = 60
+- saves
+    - fort +5+0+3(con)+1(item)= 9
+    - ref +2+0+1(dex)+1(item)= 4
+    - will +5+2+5(wis)+1(item)= 13
 - lvls
     - 1 cleric
     - 2 cleric
@@ -17,28 +22,100 @@
     - 5 cleric
     - 6 cleric
     - 7 cleric
-        - skills (2+int)*10(conc, craft, diplm, heal, know-arc/hist/rel/plan, prof, spellcraft): 30. 4(8)bluff, 4(8)hide, 10conc, 4spellcraft
+        - skills (2+int+1)*10(conc, craft, diplm, heal, know-arc/hist/rel/plan, prof, spellcraft): 30. 
+            - conc, know-rel, hide 5, bluff 5
     - 8 shadowcraft mage 
         - cloak-of-shadow (concealment lvl3-magic, hide, not in daylight, enemy attack miss 15% + 5% per shadowcraft lvl) 
         - req: bluff4 hide4, lvl4-shadow-spell, gnome,3illusion
-        - skills 4+int(bluff, conc, disgu, hide, know arc, silently, perfom, search, spellcraft, spot):
-    - (9 shadowcraft mage silent illusion)
-    - (10 shadowcraft mage shadow illusion)
-    - (11 shadowcraft mage extend illusion)
-    - (12 shadowcraft mage powerful shadow magic)
-    - (13 contemplative)
+        - skills 4+int+1(bluff, conc, disgu, hide, know arc, silently, perfom, search, spellcraft, spot):
+    - (9 cleric, know-rel)
+    - (10 contemplative)
+    - (11 shadowcraft mage silent illusion)
+    - (12 shadowcraft mage shadow illusion)
+    - (13 shadowcraft mage extend illusion)
+    - (14 shadowcraft mage powerful shadow magic)
+- initiative: 1(dex)+4(improv.init)
+- AC: 10+1(dex)+10(armor)+2(shield)+1(size) = 24
+- ranged hit: 5(bab)+5(wis)+1(size)
+- items (lvl7=19000gp)
+    - small full plate armor 1650gp (ac+8,dex+1,ac-5,weight 25lb) (=2650gp)
+        - +1ac 1000gp
+    - masterwork buckler (ac+1,armorcheck-0,2.5lb) 165gp (=8665gp)
+        - +1ac 1000gp
+        - shadow +5hide, 3750gp
+        - silent moves +5move-silently, 3750gp
+    - cure light wound 750gp
+    - bag of holding (15lb, keep 250lb) 2500gp
+    - cloak of resistance+1 1000gp
+    - eyes of the eagle (spot+5) 2500gp
+    - small masterwork light crossbow (1d6 dam, 19-20x2, 80ft inc, 2lb, +1 to hit = 12, 335gp)
+    - 100 small javelins (1d4-2 dam, 30ft range inc, 1lb, 1gp)
+    - above=18500gp
+    - bolts
+    - small darts (1d3-1 dam, 20ft range inc, 1/4lb, 5sp)
+    - small morningstar
+    - onyxes for the remaining
+- skills (lvl8)
+    - bluff: 5+1(cha)=6
+    - concentration 10+3(con)= 13 (defensive: 15+spelllvl)
+    - hide: 5+4(size)+4(race)+1(dex)+5(armor)= 19
+    - knowledge religion: 10+1(int)=11
+    - listen: 5(wis)+2(race)= 7
+    - move silently: 4(race)+1(dex)+5(armor)= 10
+    - spot: 6+5(wis)+5(item)+2(race)=18
+
+- spells
+    - 0 6
+        - 2x guidance
+        - 2x detect magic
+        - light
+        - create water
+    - 1 4+1+2 spontaneous  obscuring mist
+        - 3x comprehend language
+        - NOT cure light
+        - 2x lesser vigor 1/round, 15 rounds
+        - resurgence
+    - 2 3+1+1 spontaneous darkness
+        - 2xiron silence
+        - 2xhold person
+        - cure moderate wounds
+        - (desecrate)
+        - NOT undetectable alignment
+        - NOT zone of truth
+        - NOT shatter
+        - NOT cure moderate wounds
+    - 3 3+1+1 spontaneous deeper darkness
+        - tongues
+        - vigor 2/round, 10+lvl rounds
+        - 3xcure serious wounds
+        - (animate dead)
+    - 4 2+1+1 spontaneous shadow conjuration!
+        - glibness
+        - 3xcure critical (4d6+lvl)
+        - NOT divine power
+        - restoration
+- feats
+    - Nymphs kiss (seen as fey by fey, +1skill, +2cha for cha-based checks, +1 save vs. spell and spell-like abilities)
+        - flaw: high metabolism - eat x2, easy starvation
+    - improved initiative
+        - flaw: hopeless collector
+    - 3 spell focus illusions
+    - 6 Zen Archery bab+0: wis instead of dex for ranged +1: hear=see of hit, +6: touch spells(normal attack), +11:full round->+20 insight to hit
+    - (12 travel devotion YET - std.move as swift action instead of 5ft. move for 1 min/day or 1min/2rebuke)
+- variant
+    - spontaneous domain casting (spontaneous shadow instead of inflict + heal/inflict in domain slot) phb2
 - domains
-    - travel
-        - Lvl x freedom of movement
-        - 1 Longstrider: Increases your speed.
-        - 2 Locate Object: Senses direction toward object (specific or type).
-        - 3 Fly: Subject flies at speed of 60 ft.
-        - 4 Dimension Door: Teleports you short distance.
-        - 5 Teleport: Instantly transports you as far as 100 miles/level.
-        - 6 Find the Path: Shows most direct way to a location.
-        - 7 Greater Teleport: As teleport, but no range limit and no off-target arrival.
-        - 8 Phase Door: Creates an invisible passage through wood or stone.
-        - 9 Astral ProjectionM: Projects you and companions onto Astral Plane. 
+    - commerce
+        - Granted Power: Gain a +10 competence bonus on Profession checks to earn a living (not checks to accomplish specialized tasks).  Add Appraise to your list of cleric class skills.
+        - 1 Comprehend Languages: You understand all spoken and written languages.
+        - 2 Zone of Truth: Subjects within range cannot lie.
+        - 3 Tongues: Speak any language.
+        - 4 Glibness: Gain +30 on Bluff checks, and your lies can escape magical discernment.
+        - 5 True SeeingM: Lets you see all things as they really are.
+        - 6 Leomund's Secret ChestF: Hides expensive chest on Ethereal Plane; you can retrieve it at will.
+        - 7 RefugeM: Alters item to transport its possessor to you.
+        - 8 Analyze DweomerF: Reveals magical aspects of subject.
+        - 9 Polymorph Any Object: Changes any subject into anything else.
     - shadow (spontaneous)
         - Granted Power: You gain Blind-Fight as a bonus feat.
         - 1 Obscuring Mist: Fog surrounds you.
@@ -50,35 +127,17 @@
         - 7 Shadow Conjuration, Greater: As shadow conjuration, but up to 6th level and 60% real.
         - 8 Shadow Evocation, Greater: As shadow evocation, but up to 7th level and 60% real.
         - 9 Shades: As shadow conjuration, but up to 8th level and 80% real.
-- spells
-    - 0 6
-    - 1 4+1
-        - cure light
-        - lesser vigor 1/round, 15 rounds
-        - resurgence
-    - 2 3+1
-        - hold person
-        - locate object
-        - iron silence
-        - shatter
-        - cure moderate wounds
-    - 3 3+1
-        - vigor 2/round, 10+lvl rounds
-        - cure serious wounds
-        - fly
-    - 4 2+1
-        - discern lies
-        - restoration
-        - tongues
-        - dimension door
-- feats
-    - travel devotion - std.move as swift action instead of 5ft. move for 1 min/day or 1min/2rebuke
-    - spell focus illusions
-- variant
-    - spontaneous domain casting (spontaneous shadow instead of inflict + heal/inflict in domain slot) phb2
-- domains
-    - travel
-        - freedom 1 turn/level
+    - NOT travel YET...
+        - Lvl x freedom of movement
+        - 1 Longstrider: Increases your speed.
+        - 2 Locate Object: Senses direction toward object (specific or type).
+        - 3 Fly: Subject flies at speed of 60 ft.
+        - 4 Dimension Door: Teleports you short distance.
+        - 5 Teleport: Instantly transports you as far as 100 miles/level.
+        - 6 Find the Path: Shows most direct way to a location.
+        - 7 Greater Teleport: As teleport, but no range limit and no off-target arrival.
+        - 8 Phase Door: Creates an invisible passage through wood or stone.
+        - 9 Astral ProjectionM: Projects you and companions onto Astral Plane. 
 - race
     - +2dex +2con -2str -2cha
     - small (+1ac+1atck+4hide 3/4 lift)
