@@ -4,6 +4,12 @@ pretend kill lord jori -> centil keep, lord galen
 
 shacle - shadow cleric
 soriel - dragon shaman
+jarrick - michael
+desolator - andreas
+deon - brian
+
+buf:
+iron silence, longstrider, spell resistance
 
 # Build
 - abilities
@@ -13,12 +19,12 @@ soriel - dragon shaman
     - int 11+0+1= 12
     - wis 18+0+1+2= 21
     - cha 13-2+1= 12
-    - race +2dex +2con -2str -2cha, age:-1/+1, 80 statpoints
-- hp: 8+6d8+1d4+3*8 = 8+5+5+7+3+7+5+4+24 = 60 - 7 -1lvl
+    - race +4dex +2con -2str -2cha, age:-1/+1, 80 statpoints
+- hp: 8+6d8+1d4+1d8+3*9 = 8+5+5+7+3+7+5+4+3+24 = 66 -2
 - saves
-    - fort +5+0+3(con)+1(item)= 9
+    - fort +4+0+3(con)+1(item)= 7
     - ref +2+0+1(dex)+1(item)= 4
-    - will +5+2+5(wis)+1(item)= 13
+    - will +5+2+5(wis)+1(item)= 14
 - lvls
     - 1 cleric
     - 2 cleric
@@ -33,25 +39,26 @@ soriel - dragon shaman
         - cloak-of-shadow (concealment lvl3-magic, hide, not in daylight, enemy attack miss 15% + 5% per shadowcraft lvl) 
         - req: bluff4 hide4, lvl4-shadow-spell, gnome,3illusion
         - skills 4+int+1(bluff, conc, disgu, hide, know arc, silently, perfom, search, spellcraft, spot):
-    - (9 cleric, know-rel)
-    - (10 contemplative)
-    - (11 shadowcraft mage silent illusion)
+    - 9 shadowcraft mage silent illusion
+    - (10 cleric, know-rel)
+        - skills 2+int+1 = 4 (3xknow religion, 1x conc)
+    - (11 contemplative)
     - (12 shadowcraft mage shadow illusion)
     - (13 shadowcraft mage extend illusion)
     - (14 shadowcraft mage powerful shadow magic)
 - initiative: 1(dex)+4(improv.init)
 - AC: 10+1(dex)+9(armor)+2(shield)+1(size) = 23
-- ranged hit: 5(bab)+5(wis)+1(size)
+- ranged hit: 6(bab)+5(wis)+1(size)
 - God: shar(shadow+travel) Neutral Evil
 - items 
     - 2200gp
     - amulet of non-detection
     - small full plate armor 1650gp (ac+8,dex+1,ac-5,weight 25lb)
         - +1ac 
-    - masterwork buckler (ac+1,armorcheck-0,2.5lb) 165gp 
-        - +1ac
         - shadow +5hide
         - silent moves +5move-silently
+    - masterwork buckler (ac+1,armorcheck-0,2.5lb) 165gp 
+        - +1ac
     - cure light wound -3
     - bag of holding (15lb, keep 250lb)
     - cloak of resistance+1 
@@ -64,10 +71,10 @@ soriel - dragon shaman
 - skills (lvl8)
     - bluff: 5+1(cha)=6
     - concentration 10+3(con)= 13 (defensive: 15+spelllvl)
-    - hide: 5+4(size)+4(race)+1(dex)+5(armor)= 19
+    - hide: 6+4(size)+4(race)+1(dex)+5(armor)= 20
     - knowledge religion: 10+1(int)=11
     - listen: 5(wis)+2(race)= 7
-    - move silently: 4(race)+1(dex)+5(armor)= 10
+    - move silently: 5+4(race)+1(dex)+5(armor)= 15
     - spot: 6+5(wis)+5(item)+2(race)=18
 - spells
     - 0 6
@@ -82,27 +89,38 @@ soriel - dragon shaman
         - (2x) resurgence
         - (airbubbles)
         - hide from undead
-    - 2 3+1+1 spontaneous darkness
-        - iron silence
-        - 2xhold person
+    - 2 4+1+1 spontaneous darkness
         - cure moderate wounds
-        - shatter
-        - (silence)
+        - iron silence
+        - 2x silence
+        - (2x hold person)
+        - (shatter)
+        - (hold person)
         - (desecrate)
         - NOT undetectable alignment
         - NOT zone of truth
         - NOT cure moderate wounds
+        - (avoid planar effects)
     - 3 3+1+1 spontaneous deeper darkness
         - fly
-        - 2x protection from acid
-        - cure serious wounds
+        - 3x cure serious wounds
         - vigor 2/round, 10+lvl rounds
+        - (2 protection from acid)
         - (animate dead)
     - 4 2+1+1 spontaneous shadow conjuration!
         - dimension door
         - 2xcure critical (4d6+lvl)
         - restoration
         - NOT divine power
+    - 5 1+1+1 spontaneous shadow evocation!
+        - teleport
+        - plane shift
+        - spell resistance
+        - (plane shift)
+        - (scry)
+        - (slay living)
+        - (wall of stone)
+        - (surge of fortune)
 - feats
     - Nymphs kiss (seen as fey by fey, +1skill, +2cha for cha-based checks, +1 save vs. spell and spell-like abilities)
         - flaw: high metabolism - eat x2, easy starvation
@@ -152,7 +170,7 @@ soriel - dragon shaman
     - +2dex +2con -2str -2cha
     - small (+1ac+1atck+4hide 3/4 lift)
     - speed: 30ft
-    - lowlight+darkvision60ft
+    - lowlight+darkvision 60ft
     - +1 racial attack vs kobolds+goblinoids
     - +4ac dodge vs giant-type (ogres/trolls/giants)
     - +4 hide/move-silently, +2listen/spot
