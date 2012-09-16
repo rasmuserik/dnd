@@ -9,7 +9,7 @@ desolator - andreas
 deon - brian
 
 buf:
-iron silence, longstrider, spell resistance
+iron silence, longstrider, protection against acid, spell resistance
 
 # Build
 - abilities
@@ -20,7 +20,7 @@ iron silence, longstrider, spell resistance
     - wis 18+0+1+2= 21
     - cha 13-2+1= 12
     - race +4dex +2con -2str -2cha, age:-1/+1, 80 statpoints
-- hp: 8+6d8+1d4+1d8+3*9 = 8+5+5+7+3+7+5+4+3+24 = 66 -2
+- hp: 8+6d8+1d4+1d8+3*9 = 8+5+5+7+3+7+5+4+3+24 = 66
 - saves
     - fort +4+0+3(con)+1(item)= 7
     - ref +2+0+1(dex)+1(item)= 4
@@ -59,7 +59,7 @@ iron silence, longstrider, spell resistance
         - silent moves +5move-silently
     - masterwork buckler (ac+1,armorcheck-0,2.5lb) 165gp 
         - +1ac
-    - cure light wound -3
+    - cure light wound -20
     - bag of holding (15lb, keep 250lb)
     - cloak of resistance+1 
     - eyes of the eagle (spot+5)
@@ -84,15 +84,17 @@ iron silence, longstrider, spell resistance
         - create water
     - 1 4+1+2 spontaneous  obscuring mist
         - longstrider
-        - NOT cure light
-        - lesser vigor 1/round, 15 rounds
-        - (2x) resurgence
+        - 4x comprehend language
+        - (NOT cure light)
+        - (lesser vigor 1/round, 15 rounds)
+        - 2x resurgence
         - (airbubbles)
-        - hide from undead
+        - (hide from undead)
     - 2 4+1+1 spontaneous darkness
-        - cure moderate wounds
-        - iron silence
+        - cure moderate wounds (2d8+lvl)
+        - 2x iron silence
         - 2x silence
+        - avoid planar effects
         - (2x hold person)
         - (shatter)
         - (hold person)
@@ -100,18 +102,18 @@ iron silence, longstrider, spell resistance
         - NOT undetectable alignment
         - NOT zone of truth
         - NOT cure moderate wounds
-        - (avoid planar effects)
     - 3 3+1+1 spontaneous deeper darkness
-        - fly
-        - 3x cure serious wounds
-        - vigor 2/round, 10+lvl rounds
-        - (2 protection from acid)
+        - -2x cure serious wounds (3d8+lvl)
+        - -3 protection from acid
+        - (fly)
+        - (vigor 2/round, 10+lvl rounds)
         - (animate dead)
     - 4 2+1+1 spontaneous shadow conjuration!
         - dimension door
-        - 2xcure critical (4d6+lvl)
-        - restoration
-        - NOT divine power
+        - 2x cure critical (4d8+lvl)
+        - tongues
+        - (restoration)
+        - (NOT divine power)
     - 5 1+1+1 spontaneous shadow evocation!
         - teleport
         - plane shift
