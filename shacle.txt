@@ -13,7 +13,7 @@ iron silence, longstrider, protection against acid, spell resistance
 
 # Build
 - abilities
-    - str 12-2-1= 9
+    - str 12-2-1= 9 (light:22.5lb,medium:45lb, heavy:67.5lb)
     - dex 11+2-1= 12
     - con 15+2-1= 16
     - int 11+0+1= 12
