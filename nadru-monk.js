@@ -1,5 +1,5 @@
 lvl = 11;
-bab = 7
+bab = 8
 basestats = {
     str: 10,
     dex: 11,
@@ -42,14 +42,14 @@ skillbase = {};
 // 4(druid/monk) + 1(int) + 1(human) lvl 1-9 druid
 //Concentration (Con), Craft (Int), Diplomacy (Cha), Handle Animal (Cha), Heal (Wis), Knowledge (nature) (Int), Listen (Wis), Profession (Wis), Ride (Dex), Spellcraft (Int), Spot (Wis), Survival (Wis), Swim (Str). 
 
-// monk
+// druid 1 (TODO needs update)
 skillbase.concentration = 4;
 skillbase.listen = 4;
 skillbase.spot = 4;
-skillbase.movesilent = 4;
-skillbase.hide = 4;
-skillbase.tumble = 4;
 
+skillbase.movesilent = 0;
+skillbase.hide = 0;
+skillbase.tumble = 0;
 skillbase.survival = 0;
 skillbase.knownature = 0;
 skillbase.profession_herbalist_poisonmaking = 0;
@@ -111,11 +111,6 @@ feats = {
 //"Leadership": "attract cohort and followers"}
 }
 classes = {
-// monk
-"flurry of blows" : "-2/-2 attack instead of +0",
-"improved grapple" : "no attck of opportunity when starting a grapple; +4 grapple bonus",
-"unarmed strike" : "1d6 unarmed attack lethal or nonlethal",
-"ac bonus" : "wis to ac when unarmored and unencumbered",
 // druid
 "animal companion": "gain animal after 24hr ritual",
 "nature sense": "+2 knownature and survival",
@@ -131,38 +126,40 @@ spelllist = [
 "0 Light: Object shines like a torch.",
 "0 Light: Object shines like a torch.",
 "0 Light: Object shines like a torch.",
-"0 Detect Poison: Detects poison in one creature or object.",
-"0 Detect Poison: Detects poison in one creature or object.",
-"0 Detect Poison: Detects poison in one creature or object.",
+"Guidance: +1 on one attack roll, saving throw, or skill check.",
+"Guidance: +1 on one attack roll, saving throw, or skill check.",
+"Guidance: +1 on one attack roll, saving throw, or skill check.",
 
 "1 Obscuring Mist: Fog surrounds you.",
 "1 Endure Elements: Exist comfortably in hot or cold environments.",
-"1 Speak with Animals: You can communicate with animals.",
 "1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.",
 "1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.",
+"1 cure light wounds",
+"1 cure light wounds",
 
 "2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
 "2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
-"2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
-"2 Bull's Strength: Subject gains +4 to Str for 1 min./level.",
-"2 Tree Shape: You look exactly like a tree for 1 hour/level.",
+"2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.",
+"2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.",
+"2 earthbind",
 
 "3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
-"3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
-"3 Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).",
+"3 Alter FortunePHB2: Fantastic spell. Great for emergencies (reroll a save!)",
+"3 Alter FortunePHB2: Fantastic spell. Great for emergencies (reroll a save!)",
+"3 BlindsightSC: 30' Blindsight. Who needs See Invisibility?",
 "3 Call Lightning: Calls down lightning bolts (3d6 per bolt) from sky 9 bolts within 9min.",
 
+"4 claws of savage",
 "4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
 "4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
 "4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
 
-"5 Wall of Thorns: Thorns damage anyone who tries to pass. ",
+"5 Baleful Polymorph: Transforms subject into harmless animal.",
+"5 death ward",
+
+"6 superior resistance",
+"6 (spellstaffed) mummify",
 ];
-
-"0th Level",
-"",
-"1st Level",
-"2nd Level",
 
 spells = { //{{{1
 "0 x 6": //{{{2
@@ -182,7 +179,7 @@ spells = { //{{{1
 "Resistance: Subject gains +1 bonus on saving throws.",
 "Virtue: Subject gains 1 temporary hp.",
 ],
-"1 x 4+1": //{{{2
+"1 x 5+1": //{{{2
 [
 "Pass without Trace: One subject/level leaves no tracks.",
 "Endure Elements: Exist comfortably in hot or cold environments.",
@@ -264,7 +261,7 @@ spells = { //{{{1
 "Tree Shape: You look exactly like a tree for 1 hour/level.",
 "Warp Wood: Bends wood (shaft, handle, door, plank).",
 ],
-"3 x 3+1": //{{{2
+"3 x 4+1": //{{{2
 [
 "Plant Growth: Grows vegetation, improves crops.",
 "Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
@@ -315,7 +312,7 @@ spells = { //{{{1
 "Summon Nature's Ally III: Calls creature to fight.",
 "Water Breathing: Subjects can breathe underwater.",
 ],
-"4 x 2+1": //{{{2
+"4 x 3+1": //{{{2
 [
 "ScryingF: Spies on subject from a distance.",
 "Flame Strike: Smite foes with Divine fire (1d6/level damage).",
@@ -351,7 +348,7 @@ spells = { //{{{1
 "Spike Stones: Creatures in area take 1d8 damage, may be slowed.",
 "Summon Nature's Ally IV: Calls creature to fight.",
 ],
-"5 x 1+0": //{{{2
+"5 x 2+0": //{{{2
 [
 "Wall of Thorns: Thorns damage anyone who tries to pass. ",
 "Animal Growth: One animal/two levels doubles in size.",
@@ -384,7 +381,7 @@ spells = { //{{{1
 "UnhallowM: Designates location as unholy.",
 "Wall of Fire: Deals 2d4 fire damage out to 10 ft. and 1d4 out to 20 ft. Passing through wall deals 2d6 damage +1/level.",
 ],
-"6 x 0+0": //{{{2
+"6 x 1+0": //{{{2
 [
 "Antilife Shell: Exceedingly powerful defensive spell. Anything living without SR just can't touch you.",
 "Enveloping CocoonSC: This will let you turn the save of any number of nasty spells (Miasma and Baleful Polymorph being the nastiest) into a Reflex save, essentially, or just tie up one enemy that doesn't have a light/natural weapon handy (including incorporeal foes).",
@@ -416,7 +413,8 @@ naturalac = 0;
 // Armor class
 // same touch and 
 function ac() {
-    var fullac = 10 + naturalac + mod(stats.dex) - size + /* monk */mod(stats.wis);
+    var monksBelt = 5;
+    var fullac = 10 + naturalac + mod(stats.dex) - size + monksBelt;
     return { touch: fullac - naturalac,
              flatfooted: fullac - mod(stats.dex),
              normal: fullac};
@@ -425,9 +423,9 @@ function ac() {
 // saves
 function saves() {
     return {
-	fortitude: mod(stats.con) +2 + 7,
-	reflex: mod(stats.dex) +2+ 3,
-	will: mod(stats.wis) +2+ 7,
+	fortitude: mod(stats.con) + 7,
+	reflex: mod(stats.dex) + 3,
+	will: mod(stats.wis) + 7,
     }
 }
 // movement
@@ -447,6 +445,7 @@ function print() {
     console.log("saves:", saves());
     console.log("ac:", ac());
     console.log("attack: +", bab + mod(stats.str) - size);
+    console.log("ranged attack: +", bab + mod(stats.dex) - size);
     console.log("grapple: ", bab + mod(stats.str) + 4*size + 4 /*improved grapple */);
     console.log("dambonus:", mod(stats.str));
     console.log("specials:" , specials);
@@ -461,6 +460,7 @@ console.log("spells:", spells);
 
 // wild shapes
 
+/*
 console.log("\n\ndire lion");
 move = "40ft walk"
 stats = Object.create(stats);
@@ -495,24 +495,6 @@ specials = [
 ]
 print();
 
-console.log("\n\nbrown bear");
-move = "40ft walk"
-stats = Object.create(stats);
-stats.str = 27;
-stats.dex = 13;
-stats.con = 19;
-size = 1;
-specials = "";
-naturalac = 5;
-specials = [
-	"claw: +0 1d8",
-	"claw: +0 1d8",
-	"bite: -5 2d6",
-    "Improved Grab (Ex): To use this ability, a brown bear must hit with a claw attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity.",
-    "Skills: A brown bear has a +4 racial bonus on Swim checks. "
-]
-print();
-
 console.log("\n\nrhinoceros");
 move = "30ft walk"
 stats = Object.create(stats);
@@ -543,20 +525,6 @@ specials = [
 ]
 print();
 
-console.log("\n\ndire bat");
-move = "20ft walk / 40ft fly"
-stats = Object.create(stats);
-stats.str = 17;
-stats.dex = 22;
-stats.con = 17;
-size = 1;
-naturalac = 5;
-specials = [
-    "bite +0 1d8"
-]
-print();
-
-
 console.log("\n\ndire hawk");
 move = "10ft walk / 80ft fly"
 stats = Object.create(stats);
@@ -586,6 +554,105 @@ specials = [
     "poison: dc11fort 1d6/1d6 con"
 ]
 print();
+*/
+
+console.log("\n\nbrown bear");
+move = "40ft walk"
+stats = Object.create(stats);
+stats.str = 27;
+stats.dex = 13;
+stats.con = 19;
+size = 1;
+specials = "";
+naturalac = 5;
+specials = [
+	"claw: +0 1d8",
+	"claw: +0 1d8",
+	"bite: -5 2d6",
+    "Improved Grab (Ex): To use this ability, a brown bear must hit with a claw attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity.",
+    "Skills: A brown bear has a +4 racial bonus on Swim checks. "
+]
+print();
+
+console.log("\n\ndire bat");
+move = "20ft walk / 40ft fly"
+stats = Object.create(stats);
+stats.str = 17;
+stats.dex = 22;
+stats.con = 17;
+size = 1;
+naturalac = 5;
+specials = [
+    "bite +0 1d8"
+]
+print();
+
+console.log("\n\ntiny viper");
+move = "15ft walk/climb/swim"
+stats = Object.create(stats);
+stats.str = 4;
+stats.dex = 17;
+stats.con = 11;
+size = -2;
+naturalac = 2;
+specials = [
+    "bite +0 1"
+]
+print();
+
+console.log("\n\nlegendary eagle");
+move = "10ft walk, 100ft fly average"
+stats = Object.create(stats);
+stats.str = 15;
+stats.dex = 30;
+stats.con = 17;
+size = -1;
+naturalac = 4;
+specials = [
+    "claw +0 1d6+2",
+    "claw +0 1d6+2",
+    "bite -5 1d8+1",
+];
+print();
+
+console.log("\n\nlegendary ape");
+move = "40ft walk, 20ft climb"
+stats = Object.create(stats);
+stats.str = 30;
+stats.dex = 17;
+stats.con = 16;
+size = 0;
+naturalac = 6;
+specials = [
+    "claw +0 1d8+10",
+    "claw +0 1d8+10",
+    "bite -5 2d6+5",
+    "rend on both claws, 2d8+15"
+]
+print();
+
+console.log("\n\nlegendary wolf");
+move = "60ft"
+stats = Object.create(stats);
+stats.str = 25;
+stats.dex = 28;
+stats.con = 21;
+size = 0;
+naturalac = 5;
+specials = [
+    "bite +0 2d6+10",
+    "trip"
+]
+print();
+
+
 console.log(spelllist);
 
 console.log("poison: dc15, 1d4 con");
+
+console.log("items", [
+    "3x Wilding Clasp: Appearing as a 3-inch-long gold chain, this item works only when attached to an amulet, vest, or similar item. The clasp prevents both itself and the attached item from melding into the wearer’s new form when transforming magic (such as polymorph self or wild shape) is used. The item is still worn in the same manner it previously was and remains available for use in the new form. For example, a druid with a wilding clasp attached to her periapt of Wisdom could use wild shape to become a wolf, but the periapt and the wilding clasp would remain in their normal forms, fully functional.  Some forms may be harmful to certain items; for in- stance, it would be unwise to take the form of a fire ele- mental while retaining a functional necklace of fireballs.  Casler Level: 5th; Prerequisites: Craft Wondrous Item, poly- morph self or wild shape ability; Market Price: 4,000 gp; Weight:",
+    "wild shape amulet",
+    "pearl of speech",
+    "monks belt AC: +wis+1 = +5"
+]);

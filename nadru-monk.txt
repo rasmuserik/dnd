@@ -10,17 +10,18 @@ initiative:  4
 skills: { concentration: 16,
   listen: 17,
   spot: 17,
-  movesilent: 4,
-  hide: 4,
-  tumble: 4,
+  movesilent: 0,
+  hide: 0,
+  tumble: 0,
   survival: 21,
   knownature: 16,
   profession_herbalist_poisonmaking: 5,
   wildempathy: 12 }
-saves: { fortitude: 12, reflex: 5, will: 13 }
-ac: { touch: 14, flatfooted: 14, normal: 14 }
-attack: + 7
-grapple:  11
+saves: { fortitude: 10, reflex: 3, will: 11 }
+ac: { touch: 15, flatfooted: 15, normal: 15 }
+attack: + 8
+ranged attack: + 8
+grapple:  12
 dambonus: 0
 specials: [ 'unarmed monk: +0 1d6' ]
 hp: 80
@@ -29,11 +30,7 @@ feats: { 'Spell Focus Conjuration': '+1 difficulty class',
   'Augment Summoning': '+4con +4str to summons',
   'Natural spell': 'casting in wild shape',
   'offset material': '' }
-class: { 'flurry of blows': '-2/-2 attack instead of +0',
-  'improved grapple': 'no attck of opportunity when starting a grapple; +4 grapple bonus',
-  'unarmed strike': '1d6 unarmed attack lethal or nonlethal',
-  'ac bonus': 'wis to ac when unarmored and unencumbered',
-  'animal companion': 'gain animal after 24hr ritual',
+class: { 'animal companion': 'gain animal after 24hr ritual',
   'nature sense': '+2 knownature and survival',
   'wild empathy': 'animal diplomacy',
   'woodland stride': 'normal speed in undergrowth',
@@ -43,8 +40,8 @@ class: { 'flurry of blows': '-2/-2 attack instead of +0',
   'venom immunity': 'Immune to all poison' }
 spells: { '0 x 6': 
    [ 'Create Water: Creates 2 gallons/level of pure water.',
-     'Cure Minor Wounds: Cures 1 point of damage.',
      'Detect Magic: Detects spells and magic items within 60 ft.',
+     'Cure Minor Wounds: Cures 1 point of damage.',
      'Guidance: +1 on one attack roll, saving throw, or skill check.',
      'Light: Object shines like a torch.',
      'Mending: Makes minor repairs on an object.',
@@ -56,16 +53,28 @@ spells: { '0 x 6':
      'Read Magic: Read scrolls and spellbooks.',
      'Resistance: Subject gains +1 bonus on saving throws.',
      'Virtue: Subject gains 1 temporary hp.' ],
-  '1 x 4+1': 
+  '1 x 5+1': 
    [ 'Pass without Trace: One subject/level leaves no tracks.',
      'Endure Elements: Exist comfortably in hot or cold environments.',
      'Entangle: Plants entangle everyone in 40-ft.-radius.',
      'Obscuring Mist: Fog surrounds you.',
      'Speak with Animals: You can communicate with animals.',
+     'Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.',
+     '',
+     'Aspect of the WolfSC: This is a fairly handy melee self-buff for early levels (instead of going the wooden club route with Shillelagh). At later levels, you can share it with your Animal Companion to help deal with the practical issues of traveling with a snarling bear the size of a bull elephant.',
+     'Babau SlimeSC: Great for grappling druids, and a general-purpose damage buff for any Wild Shaping Druid.',
+     'Beget BogunSC: Creates a small little creature to do your chores.',
+     'CamouflageSC: +10 to Hide, and it works in any environment.',
+     'Enrage AnimalSC: A solid buff for your animal companion, enabling it to rage like a barbarian without the fatigue.',
+     'Lessor VigorSC: This spell actually outperforms Cure Light Wounds, especially out of combat. Wands of Lesser Vigor are great for healing between fights.',
+     'Omen of PerilSC: Poor man\'s Augury. Quite possibly the most versatile first-level divination in the game, and doesn\'t even have a costly component or XP cost, like many similar divinations.',
+     'Spider HandBoVD: Best. Scouting. Spell. Ever. Send out a nondescript spider to do all the scouting, with only negligible consequences if it dies? Yeah, I\'ll take that. It\'s not even an evil spell.',
+     'ThunderheadSC: 1d6 damage per round/level unless they make a reflex to negate, and also acts as a tracker against targets who turn invisible',
+     'Twilight LuckBoED: +1 on saves is always handy, especially at higher levels. Just lay off the booze.',
+     'Wood WoseSC: Unseen Servant, only druidic. It just can\'t handle doorknobs.',
      '',
      'Cure Light Wounds: Cures 1d8 damage +1/level (max +5).',
      'Produce Flame: 1d6 damage +1/level, touch or thrown.',
-     'Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.',
      'Charm Animal: Makes one animal your friend.',
      'Calm Animals: Calms (2d4 + level) HD of animals.',
      'Detect Animals or Plants: Detects kinds of animals or plants.',
@@ -83,6 +92,22 @@ spells: { '0 x 6':
      'Bear\'s Endurance: Subject gains +4 to Con for 1 min./level.',
      'Gust of Wind: Blows away or knocks down smaller creatures.',
      'Wood Shape: Rearranges wooden objects to suit you.',
+     'Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.',
+     '',
+     'Align FangSC: Handy for DR problems.',
+     'Animalistic PowerPHB2: Versatility over the animal stat buffs, traded for half the power. It\'s a style thing; either way is good.',
+     'Bite of the WereratSC: A variety of handy stat buffs, plus an additional bite attack for forms that don\'t have a natural bite.',
+     'Blood SnowFrost: Only prep it during the winter or when in an arctic or otherwise frozen area, but d2 Con damage/round is awesome.',
+     'BramblesSC: Excellent weapon buff, especially coupled with Shillelagh.',
+     'Briar WebSC: A handy entangling spell that may also cause damage.',
+     'Creeping ColdSC: A great attack spell, and replaces produce flame.',
+     'DesiccateSand: d6/level (max 5d6) on a single target, with a weird damage type that ignores DR and energy resistance. Can even cause dehydration (which is fatigue on steroids).',
+     'EarthbindSC: Ground those fliers.',
+     'Halo of SandSand: Yet another druid AC buff. This one is deflection, though, so it stacks with Barkskin and armor.',
+     'Nature\'s FavorSC: Excellent (swift!) animal buff spell; cast it on your Animal Companion or summons. Technically better than Greater Magic Fang, but has a shorter duration and doesn\'t bypass DR. The Complete Divine version is even stronger, but the spell was nerfed in Complete Adventurer.',
+     'Share HuskSC: A great scouting spell. Use it if Spider Hand isn\'t available.',
+     'Snake\'s Swiftness, MassSC: The lower-level, single-target version of this spell isn\'t anything special, but giving a free attack to all of your party members, plus your animal companion, plus any summons you have nearby is just too fun.',
+     'SplinterboltSC: its the druidic scorching ray, but with no SR (and coupled with a nice high dex animal form, (e.g., Legendary eagle) its nearly as easy to hit with). 4d6 x3 with a 18-20 threat range isn\'t half bad. ',
      '',
      'Bull\'s Strength: Subject gains +4 to Str for 1 min./level.',
      'Resist Energy: Ignores 10 (or more) points of damage/attack from specified energy type.',
@@ -106,11 +131,36 @@ spells: { '0 x 6':
      'Summon Swarm: Summons swarm of bats, rats, or spiders.',
      'Tree Shape: You look exactly like a tree for 1 hour/level.',
      'Warp Wood: Bends wood (shaft, handle, door, plank).' ],
-  '3 x 3+1': 
+  '3 x 4+1': 
    [ 'Plant Growth: Grows vegetation, improves crops.',
      'Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ',
      'Stone Shape: Sculpts stone into any shape.',
      'Call Lightning: Calls down lightning bolts (3d6 per bolt) from sky 9 bolts within 9min.',
+     'Alter FortunePHB2: Fantastic spell. Great for emergencies (reroll a save!)',
+     'BlindsightSC: 30\' Blindsight. Who needs See Invisibility?',
+     'Girallon\'s BlessingSC: This spell gives the creature touched an extra set of arms for 10/minutes per level, which can be quite handy if your wildshape form could use some arms to manipulate objects.  There are probably better ways to mete out damage, but solid choice if you think your shark form may need to open a door, chest, etc.',
+     '',
+     'Arctic HazeFrost) and HaboobSand: Damaging and opaque fog. Useful as battlefield control. TremorSC: can be used similarly, but it doesn\'t damage and doesn\'t block line of sight.',
+     'Attune FormSC: Immunity from planar effects for caster level/3 characters. A handy spell for high levels, and much more useful than the lower-level Avoid Planar EffectsSC: due to the longer duration.',
+     'Bite of the WerewolfSC: Again, a variety of nifty stat buffs and a spare bite attack.',
+     'CrumbleSC: Think of this as druidic Knock. Lots of things won\'t stand up to a casting of this spell.',
+     'Entanging StaffSC: Free action grapples with a +8 bonus. Great for when you\'re out of Wild Shape for some reason or if you\'re using a Spikes-enspelled staff as a Legendary Ape.',
+     'Evard\'s Menacing TentaclesPHB2: To the extent that you have a good strength bonus, this spell provides some battlefield control and meets out some damage and gives a climbing bonus to boot',
+     'ForestfoldSC: +10 on Hide and Move Silently checks in a natural environment of your choice.',
+     'Giant\'s WrathSC: An interesting alternative to Call Lightning. At early levels, the lack of a need for an attack roll, the lack of DR issues, and the greater number of uses per cast makes Call Lightning the better choice. At higher levels, though, the high strength of Wild Shape forms, the caster-level based damage bonus, and the lack of SR on Giant\'s Wrath helps it catch up.',
+     'Greater Magic Fang: Handy self-buff and good to share with your Animal Companion.',
+     'Junglerazor[sup]SC: Does 1d10/level (up to 10) in a 120ft line. Because it\'s target specific, shoot through your friends to damage only plants, plant critters, vermin, fey and animals.',
+     'Poison: Con damage is always handy, and the DC scales upward as you increase in level. A much-overlooked spell.',
+     'Primal FormSC: This spell isn\'t overwhelmingly powerful, but it\'s a versatile self-buff. Flight and swim speed are easy to get with Wild Shape, but this spell is available before plentiful Wild Shape uses, and you can choose on the fly among a melee buff, a defensive buff, or a source of flight.',
+     'Protection From Energy: A versatile, effective defensive buff. You\'ll rarely regret prepping it.',
+     'Remove Disease: Not something you\'re going to prep every day, but handy when you need it.',
+     'SpiderskinSC: Barkskin, plus a save bonus against poison and a Hide bonus. Use it on the party sneak, or when you\'re fighting monstrous vermin or Yuan-Ti.',
+     'SpikesSC: Improved Brambles. Higher attack, better threat level; what\'s not to like?',
+     'SpritjawsSC: I love this spell, and it\'s one of a druid\'s few good force spells. Throw this spell out there and it\'s a combination of Spiritual Weapon and Telekinetic Grapple. It damages and confounds enemies, doing an especially good job of pinning down spellcasters and incorporeal foes.',
+     'Swift Lion\'s ChargeMiniHB/Lion\'s ChargeSC: Pouncing is very handy, but this spell can start to eat up spell slots pretty quickly. A similar, overpowered spell named Lion\'s Charge is in Savage Species, and, while it isn\'t swift, it gives the Pounce ability for a duration.',
+     'ThornskinSC: Good as a wildshape buff, especially for grapplers, since even trying to escape hurts your enemy.',
+     'VenomfireSK: For level/hours, +d6/level damage with no cap added as an additional effect to a poisonous natural attack.',
+     'Vigor and Mass Lesser VigorSC: Both can be better than Cure Moderate Wounds at low levels, but only outside of combat. It works when you can\'t summon Unicorns yet and you don\'t have that handy wand of Cure Light Wounds. Doesn\'t work with Extend Spell (see CD FAQ), but Mass Lesser Vigor does work with Persistent Spell.',
      '',
      'Snare: Creates a magic booby trap.',
      'Wind Wall: Deflects arrows, smaller creatures, and gases.',
@@ -130,11 +180,26 @@ spells: { '0 x 6':
      'Spike Growth: Creatures in area take 1d4 damage, may be slowed.',
      'Summon Nature\'s Ally III: Calls creature to fight.',
      'Water Breathing: Subjects can breathe underwater.' ],
-  '4 x 2+1': 
+  '4 x 3+1': 
    [ 'ScryingF: Spies on subject from a distance.',
      'Flame Strike: Smite foes with Divine fire (1d6/level damage).',
      'Freedom of Movement: Subject moves normally despite impediments.',
+     'Enhance Wild ShapeSC: You can pick up plant forms early or get minor stat buffs, but the big bonus is the access to extraordinary abilities. Pick up the Blindsight of a Desmodu War BatMM2, or abuse Master of Many FormsCAdv.',
+     'Superior Magic FangSC: GMF on all of your attacks. It\'s self-only, though.',
      '',
+     'Arc of LightningSC: A decent no-SR spell, with damage competitive with that of a wizard or psion. It\'s a conjuration spell, so, that Spell Focus: Conjuration feat you had to pick for Augment Summoning might be useful.',
+     'Aspect of the WerebeastRoE: Nothing about this Shifter-only self-buff says it only works when you\'re in a humanoid form. Add +4 to two different attributes, and add Improved Grab, Pounce, or wolf-like Trip to whatever form you\'re in.',
+     'Bite of the WereboarSC: Useful stat buffs, a spare bite attack, and one of the better AC buffs around.',
+     'Blast of SandSand: Cone of Cold lite (cone, d6/level, max 10d6), only without the energy type. No SR!',
+     'Boreal WindFrost: Does decent cold damage, has a fairly big AoE, blows enemies away, disperses fogs and swarms, and keeps going for multiple turns without concentration. Compares favorably even to Flame Strike.',
+     'Claws of the SavageBoVD: Got claws? This gives you a +2 enhancement bonus on them, and also gives increases your claw damage as if you were two sizes larger. It is an Evil-typed spell, though.',
+     'Giant Vermin',
+     'Hibernal HealingFrost: Self-only Heal...as long as you\'re in a frostfell area, anyway.',
+     'Last BreathSC: In Complete Divine, this is druidic Revivify, but with a caster-damaging side effect. In Spell Compendium, this is a no-level-loss Reincarnate that must be cast immediately. Both are useful as an emergency option.',
+     'Sheltered VitalitySC: Immunity to ability damage or drain is situational, but very powerful when you need it. Cast this before fighting yuan-ti, giant vermin, undead, or anything else with a nasty ability damage or poison attack. The immunity to fatigue can also be handy for the party barbarian.',
+     'Vortex of TeethSC: A spell that does force damage, and can tear apart anything that can\'tget away. This makes a mess of anyone caught in Entangle.',
+     'Wall of SaltSand: Not quite Wall of Stone, but effective for battlefield control and deterring pursuit.',
+     'Wind at BackSC: It lets you double the party\'s overland speed, lasts 12 hours and can let you speed up multiple beasts of burden, as well.',
      'Air Walk: Subject treads on air as if solid (climb at 45-degree angle).',
      'Antiplant Shell: Keeps animated plants at bay.',
      'Blight: Withers one plant or deals 1d6/level damage to plant creature.',
@@ -149,15 +214,25 @@ spells: { '0 x 6':
      'Rusting Grasp: Your touch corrodes iron and alloys.',
      'Spike Stones: Creatures in area take 1d8 damage, may be slowed.',
      'Summon Nature\'s Ally IV: Calls creature to fight.' ],
-  '5 x 1+0': 
+  '5 x 2+0': 
    [ 'Wall of Thorns: Thorns damage anyone who tries to pass. ',
      'Animal Growth: One animal/two levels doubles in size.',
      'Baleful Polymorph: Transforms subject into harmless animal.',
      'Call Lightning Storm: As call lightning, but 5d6 damage per bolt.',
-     'Control Winds: Change wind direction and speed.',
      'Commune with Nature: Learn about terrain for 1 mile/level.',
      'Tree Stride: Step from one tree to another far away.',
+     'Bite of the WeretigerSC: A very high str boost, a variety of other boosts, extra attacks, and free Power Attack.',
      '',
+     'Control Winds: Change wind direction and speed.',
+     'Owl\'s InsightSC: A long-duration scaling boost to Wisdom with an unusual bonus type? Yes please.',
+     'PancaeaSC: A broad-based restoration spell, removing pretty much any condition other than ability damage/drain, disease, or death.',
+     'Phantom StagSC: Conjure a very fast mount that it gains a lot of useful additional effects based on caster-level, so that even though its only level 5 its well, it\'s worth preparing at higher level still, since it, for example, can make you ethereal (as the 9th level cleric sor/wiz spell).',
+     'Rejuvenation CoccoonSC: A decent out-of-combat Heal alternative.',
+     'Choking SandsSand: Miasma, only less so. Alternately, nonpsionic Crisis of Breath. Good for shutting down a caster for a turn.',
+     'Cloak of the SeaSC: When you\'re underwater, it\'s Water Breathing, Freedom of Movement, and Blur, all in one neat little (long-duration!) package. A must-have for any underwater adventures.',
+     'BlizzardFrost: Instant battle ender. Great for buying some time to parley or obscuring your plans. Huge area of effect.',
+     'Call AvalancheFrost While it doesn\'t cause overwhelming damage (only 8d6), it can bury many opponents in its huge area (size of creatures you can bury scales up as well). It only works outdoors, but it does damage and potential immobilization at long range. For a good trick trick, follow it up with Blood Snow and all the poor buried victims start taking CON drain while trying futilely to escape.',
+     'Anticold SphereSC: Immunity to cold and great protection from anything with the Cold subtype, with a nice long duration and an area large enough to protect the whole party.',
      'Atonement: Removes burden of misdeeds from subject.',
      'AwakenX: Animal or tree gains human intellect.',
      'Cure Critical Wounds: Cures 4d8 damage +1/level (max +20).',
@@ -169,69 +244,25 @@ spells: { '0 x 6':
      'Transmute Mud to Rock: Transforms two 10-ft. cubes per level.',
      'Transmute Rock to Mud: Transforms two 10-ft. cubes per level.',
      'UnhallowM: Designates location as unholy.',
-     'Wall of Fire: Deals 2d4 fire damage out to 10 ft. and 1d4 out to 20 ft. Passing through wall deals 2d6 damage +1/level.' ] }
-
-
-dire lion
-str 25 7
-dex 15 2
-con 17 3
-wis 19 4
-int 13 1
-cha 13 1
-move: 40ft walk
-initiative:  6
-skills: { concentration: 16,
-  listen: 17,
-  spot: 17,
-  movesilent: 6,
-  hide: 2,
-  tumble: 6,
-  survival: 21,
-  knownature: 16,
-  profession_herbalist_poisonmaking: 5,
-  wildempathy: 12 }
-saves: { fortitude: 12, reflex: 7, will: 13 }
-ac: { touch: 15, flatfooted: 17, normal: 19 }
-attack: + 13
-grapple:  22
-dambonus: 7
-specials: [ 'claw: +0 1d6',
-  'claw: +0 1d6',
-  'bite: -5 1d8',
-  'Improved Grab (Ex): To use this ability, a dire lion must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can rake.',
-  'Pounce (Ex): If a dire lion charges, it can make a full attack, including two rake specials.',
-  'Rake (Ex): Attack bonus +12 melee, damage 1d6+3.',
-  'Skills: Dire lions have a +4 racial bonus on Hide and Move Silently checks.' ]
-
-
-dire wolf
-str 25 7
-dex 15 2
-con 17 3
-wis 19 4
-int 13 1
-cha 13 1
-move: 50ft walk
-initiative:  6
-skills: { concentration: 16,
-  listen: 17,
-  spot: 17,
-  movesilent: 6,
-  hide: 2,
-  tumble: 6,
-  survival: 21,
-  knownature: 16,
-  profession_herbalist_poisonmaking: 5,
-  wildempathy: 12 }
-saves: { fortitude: 12, reflex: 7, will: 13 }
-ac: { touch: 15, flatfooted: 16, normal: 18 }
-attack: + 13
-grapple:  22
-dambonus: 7
-specials: [ 'bite: 0 1d8',
-  'Trip (Ex): A dire wolf that hits with a bite attack can attempt to trip its opponent (+11 check modifier) as a free action without making a touch attack or provoking an attack of opportunity. If the attempt fails, the opponent cannot react to trip the dire wolf.',
-  'Skills: A dire wolf has a +2 racial bonus on Hide, Listen, Move Silently, and Spot checks. ' ]
+     'Wall of Fire: Deals 2d4 fire damage out to 10 ft. and 1d4 out to 20 ft. Passing through wall deals 2d6 damage +1/level.' ],
+  '6 x 1+0': 
+   [ 'Antilife Shell: Exceedingly powerful defensive spell. Anything living without SR just can\'t touch you.',
+     'Enveloping CocoonSC: This will let you turn the save of any number of nasty spells (Miasma and Baleful Polymorph being the nastiest) into a Reflex save, essentially, or just tie up one enemy that doesn\'t have a light/natural weapon handy (including incorporeal foes).',
+     'Find the Path: Never, ever, EVER be lost.',
+     'Fire Seeds: Excellent trap spell when used to make holly berry bombs. Couple it with some sort of fire resistance or immunity and you have a killer emanation-from-yourself nuke.',
+     'MummifySand: Save or die. Plus, it\'s not death magic.',
+     'Spellstaff: One extra spell slot, of whatever level you can cast. Clerics with Miracle have no reason not to duplicate this very handy spell.',
+     'Superior ResistanceSC: +6 on all saves, all day. Its utility is obvious. (Spell Compendium upped the level, but also the duration. It\'s still worth it, unlike the pounding Major Resistance took.)',
+     '',
+     'Bite of the WerebearSC: Bite of the Weretiger only moreso.',
+     'Chasing PerfectionPHB2: Handy as a self-buff, since it\'s hard to use magic items in Wild Shape. Won\'t be terribly useful to the rest of the party at level 13, though.',
+     'DrownSC: Save or dying (0 hp). Handy for capturing enemies alive. Not death magic, but obviously doesn\'t work on non-living creatures, water-breathers, or creatures with no lungs. This has replaced the repeatedly-nerfed MiasmaSC.',
+     'Energy ImmunitySC: Powerful, of a bit situational, defensive buff. Has a long enough duration to have it on all the time.',
+     'Fires of PuritySC: A hefty melee damage buff, plus Flame Shield lite. Note that, while this spell is three levels higher than Venomfire and only adds one point per caster level instead of d6, it\'s still a good spell. That\'s how silly Venomfire is.',
+     'Tortoise ShellSC: Basically, Greater Barkskin. Not as good as Greater Luminous Armor, but is natural armor instead of armor.',
+     'Liveoak: Handy if you need a Treant to guard your camp or home. The casting time and casting limitations limit its general usefulness, though.',
+     'Greater Dispel Magic: Unlike mages and clerics, druids very rarely lose caster levels, so this is often a worthwhile spell to prep.',
+     'Greater Scrying: Scrying without the long casting time and relatively short duration; the minor spells you can cast through the sensor aren\'t that useful.' ] }
 
 
 brown bear
@@ -246,80 +277,24 @@ initiative:  5
 skills: { concentration: 17,
   listen: 17,
   spot: 17,
-  movesilent: 5,
-  hide: 1,
-  tumble: 5,
+  movesilent: 1,
+  hide: -3,
+  tumble: 1,
   survival: 21,
   knownature: 16,
   profession_herbalist_poisonmaking: 5,
   wildempathy: 12 }
-saves: { fortitude: 13, reflex: 6, will: 13 }
-ac: { touch: 14, flatfooted: 18, normal: 19 }
-attack: + 14
-grapple:  23
+saves: { fortitude: 11, reflex: 4, will: 11 }
+ac: { touch: 15, flatfooted: 19, normal: 20 }
+attack: + 15
+ranged attack: + 8
+grapple:  24
 dambonus: 8
 specials: [ 'claw: +0 1d8',
   'claw: +0 1d8',
   'bite: -5 2d6',
   'Improved Grab (Ex): To use this ability, a brown bear must hit with a claw attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity.',
   'Skills: A brown bear has a +4 racial bonus on Swim checks. ' ]
-
-
-rhinoceros
-str 26 8
-dex 10 0
-con 21 5
-wis 19 4
-int 13 1
-cha 13 1
-move: 30ft walk
-initiative:  4
-skills: { concentration: 18,
-  listen: 17,
-  spot: 17,
-  movesilent: 4,
-  hide: 0,
-  tumble: 4,
-  survival: 21,
-  knownature: 16,
-  profession_herbalist_poisonmaking: 5,
-  wildempathy: 12 }
-saves: { fortitude: 14, reflex: 5, will: 13 }
-ac: { touch: 13, flatfooted: 20, normal: 20 }
-attack: + 14
-grapple:  23
-dambonus: 8
-specials: [ 'gore: +0 2d6', 'powerful charge (double dam)' ]
-
-
-eagle
-str 10 0
-dex 15 2
-con 12 1
-wis 19 4
-int 13 1
-cha 13 1
-move: 10ft walk / 80ft fly
-initiative:  6
-skills: { concentration: 14,
-  listen: 17,
-  spot: 17,
-  movesilent: 6,
-  hide: 10,
-  tumble: 6,
-  survival: 21,
-  knownature: 16,
-  profession_herbalist_poisonmaking: 5,
-  wildempathy: 12 }
-saves: { fortitude: 10, reflex: 7, will: 13 }
-ac: { touch: 17, flatfooted: 16, normal: 18 }
-attack: + 8
-grapple:  7
-dambonus: 0
-specials: [ 'talon: +0 1d4',
-  'talon: +0 1d4',
-  'bite: -5 1d4',
-  'Skills: Eagles have a +8 racial bonus on Spot checks. ' ]
 
 
 dire bat
@@ -334,98 +309,167 @@ initiative:  10
 skills: { concentration: 16,
   listen: 17,
   spot: 17,
-  movesilent: 10,
-  hide: 6,
-  tumble: 10,
+  movesilent: 6,
+  hide: 2,
+  tumble: 6,
   survival: 21,
   knownature: 16,
   profession_herbalist_poisonmaking: 5,
   wildempathy: 12 }
-saves: { fortitude: 12, reflex: 11, will: 13 }
-ac: { touch: 19, flatfooted: 18, normal: 24 }
-attack: + 9
-grapple:  18
+saves: { fortitude: 10, reflex: 9, will: 11 }
+ac: { touch: 20, flatfooted: 19, normal: 25 }
+attack: + 10
+ranged attack: + 13
+grapple:  19
 dambonus: 3
 specials: [ 'bite +0 1d8' ]
 
 
-dire hawk
-str 12 1
-dex 22 6
-con 15 2
-wis 19 4
-int 13 1
-cha 13 1
-move: 10ft walk / 80ft fly
-initiative:  10
-skills: { concentration: 15,
-  listen: 17,
-  spot: 17,
-  movesilent: 10,
-  hide: 10,
-  tumble: 10,
-  survival: 21,
-  knownature: 16,
-  profession_herbalist_poisonmaking: 5,
-  wildempathy: 12 }
-saves: { fortitude: 11, reflex: 11, will: 13 }
-ac: { touch: 20, flatfooted: 17, normal: 23 }
-attack: + 8
-grapple:  12
-dambonus: 1
-specials: [ 'claw: +0 1d4+1',
-  'claw: +0 1d4+1',
-  'bite: -5 1d6',
-  'Skills: Dire hawk have a +8 racial bonus on Spot checks in daylight. ' ]
-
-
-large viper
-str 10 0
+tiny viper
+str 4 -3
 dex 17 3
 con 11 0
 wis 19 4
 int 13 1
 cha 13 1
-move: 20ft walk/climb/swim
+move: 15ft walk/climb/swim
 initiative:  7
 skills: { concentration: 13,
   listen: 17,
   spot: 17,
-  movesilent: 7,
-  hide: 7,
-  tumble: 7,
+  movesilent: 3,
+  hide: 11,
+  tumble: 3,
   survival: 21,
   knownature: 16,
   profession_herbalist_poisonmaking: 5,
   wildempathy: 12 }
-saves: { fortitude: 9, reflex: 8, will: 13 }
-ac: { touch: 17, flatfooted: 17, normal: 20 }
+saves: { fortitude: 7, reflex: 6, will: 11 }
+ac: { touch: 20, flatfooted: 19, normal: 22 }
 attack: + 7
-grapple:  11
-dambonus: 0
-specials: [ 'bite: +0 1d4+poison', 'poison: dc11fort 1d6/1d6 con' ]
+ranged attack: + 13
+grapple:  1
+dambonus: -3
+specials: [ 'bite +0 1' ]
+
+
+legendary eagle
+str 15 2
+dex 30 10
+con 17 3
+wis 19 4
+int 13 1
+cha 13 1
+move: 10ft walk, 100ft fly average
+initiative:  14
+skills: { concentration: 16,
+  listen: 17,
+  spot: 17,
+  movesilent: 10,
+  hide: 14,
+  tumble: 10,
+  survival: 21,
+  knownature: 16,
+  profession_herbalist_poisonmaking: 5,
+  wildempathy: 12 }
+saves: { fortitude: 10, reflex: 13, will: 11 }
+ac: { touch: 26, flatfooted: 20, normal: 30 }
+attack: + 11
+ranged attack: + 19
+grapple:  10
+dambonus: 2
+specials: [ 'claw +0 1d6+2', 'claw +0 1d6+2', 'bite -5 1d8+1' ]
+
+
+legendary ape
+str 30 10
+dex 17 3
+con 16 3
+wis 19 4
+int 13 1
+cha 13 1
+move: 40ft walk, 20ft climb
+initiative:  7
+skills: { concentration: 16,
+  listen: 17,
+  spot: 17,
+  movesilent: 3,
+  hide: 3,
+  tumble: 3,
+  survival: 21,
+  knownature: 16,
+  profession_herbalist_poisonmaking: 5,
+  wildempathy: 12 }
+saves: { fortitude: 10, reflex: 6, will: 11 }
+ac: { touch: 18, flatfooted: 21, normal: 24 }
+attack: + 18
+ranged attack: + 11
+grapple:  22
+dambonus: 10
+specials: [ 'claw +0 1d8+10',
+  'claw +0 1d8+10',
+  'bite -5 2d6+5',
+  'rend on both claws, 2d8+15' ]
+
+
+legendary wolf
+str 25 7
+dex 28 9
+con 21 5
+wis 19 4
+int 13 1
+cha 13 1
+move: 60ft
+initiative:  13
+skills: { concentration: 18,
+  listen: 17,
+  spot: 17,
+  movesilent: 9,
+  hide: 9,
+  tumble: 9,
+  survival: 21,
+  knownature: 16,
+  profession_herbalist_poisonmaking: 5,
+  wildempathy: 12 }
+saves: { fortitude: 12, reflex: 12, will: 11 }
+ac: { touch: 24, flatfooted: 20, normal: 29 }
+attack: + 15
+ranged attack: + 17
+grapple:  19
+dambonus: 7
+specials: [ 'bite +0 2d6+10', 'trip' ]
 [ '0 Light: Object shines like a torch.',
   '0 Light: Object shines like a torch.',
   '0 Light: Object shines like a torch.',
-  '0 Detect Poison: Detects poison in one creature or object.',
-  '0 Detect Poison: Detects poison in one creature or object.',
-  '0 Detect Poison: Detects poison in one creature or object.',
+  'Guidance: +1 on one attack roll, saving throw, or skill check.',
+  'Guidance: +1 on one attack roll, saving throw, or skill check.',
+  'Guidance: +1 on one attack roll, saving throw, or skill check.',
   '1 Obscuring Mist: Fog surrounds you.',
   '1 Endure Elements: Exist comfortably in hot or cold environments.',
-  '1 Speak with Animals: You can communicate with animals.',
   '1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.',
   '1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.',
+  '1 cure light wounds',
+  '1 cure light wounds',
   '2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
   '2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
-  '2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
-  '2 Bull\'s Strength: Subject gains +4 to Str for 1 min./level.',
-  '2 Tree Shape: You look exactly like a tree for 1 hour/level.',
+  '2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.',
+  '2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.',
+  '2 earthbind',
   '3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ',
-  '3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ',
-  '3 Cure Moderate Wounds: Cures 2d8 damage +1/level (max +10).',
+  '3 Alter FortunePHB2: Fantastic spell. Great for emergencies (reroll a save!)',
+  '3 Alter FortunePHB2: Fantastic spell. Great for emergencies (reroll a save!)',
+  '3 BlindsightSC: 30\' Blindsight. Who needs See Invisibility?',
   '3 Call Lightning: Calls down lightning bolts (3d6 per bolt) from sky 9 bolts within 9min.',
+  '4 claws of savage',
   '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
   '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
   '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
-  '5 Wall of Thorns: Thorns damage anyone who tries to pass. ' ]
+  '5 Baleful Polymorph: Transforms subject into harmless animal.',
+  '5 death ward',
+  '6 superior resistance',
+  '6 (spellstaffed) mummify' ]
 poison: dc15, 1d4 con
+items [ '3x Wilding Clasp: Appearing as a 3-inch-long gold chain, this item works only when attached to an amulet, vest, or similar item. The clasp prevents both itself and the attached item from melding into the wearer’s new form when transforming magic (such as polymorph self or wild shape) is used. The item is still worn in the same manner it previously was and remains available for use in the new form. For example, a druid with a wilding clasp attached to her periapt of Wisdom could use wild shape to become a wolf, but the periapt and the wilding clasp would remain in their normal forms, fully functional.  Some forms may be harmful to certain items; for in- stance, it would be unwise to take the form of a fire ele- mental while retaining a functional necklace of fireballs.  Casler Level: 5th; Prerequisites: Craft Wondrous Item, poly- morph self or wild shape ability; Market Price: 4,000 gp; Weight:',
+  'wild shape amulet',
+  'pearl of speech',
+  'monks belt AC: +wis+1 = +5' ]
