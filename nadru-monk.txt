@@ -23,7 +23,7 @@ attack: + 8
 ranged attack: + 8
 grapple:  12
 dambonus: 0
-specials: [ 'unarmed monk: +0 1d6' ]
+specials: []
 hp: 80
 feats: { 'Spell Focus Conjuration': '+1 difficulty class',
   'improved initiative': 'initiative +4',
@@ -452,7 +452,7 @@ specials: [ 'bite +0 2d6+10', 'trip' ]
   '1 cure light wounds',
   '2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
   '2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
-  '2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.',
+  '2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
   '2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.',
   '2 earthbind',
   '3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ',
@@ -460,7 +460,7 @@ specials: [ 'bite +0 2d6+10', 'trip' ]
   '3 Alter FortunePHB2: Fantastic spell. Great for emergencies (reroll a save!)',
   '3 BlindsightSC: 30\' Blindsight. Who needs See Invisibility?',
   '3 Call Lightning: Calls down lightning bolts (3d6 per bolt) from sky 9 bolts within 9min.',
-  '4 claws of savage',
+  '4 Cure Serious Wounds: Cures 3d8 damage +1/level (max +15).',
   '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
   '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
   '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
@@ -470,6 +470,6 @@ specials: [ 'bite +0 2d6+10', 'trip' ]
   '6 (spellstaffed) mummify' ]
 poison: dc15, 1d4 con
 items [ '3x Wilding Clasp: Appearing as a 3-inch-long gold chain, this item works only when attached to an amulet, vest, or similar item. The clasp prevents both itself and the attached item from melding into the wearer’s new form when transforming magic (such as polymorph self or wild shape) is used. The item is still worn in the same manner it previously was and remains available for use in the new form. For example, a druid with a wilding clasp attached to her periapt of Wisdom could use wild shape to become a wolf, but the periapt and the wilding clasp would remain in their normal forms, fully functional.  Some forms may be harmful to certain items; for in- stance, it would be unwise to take the form of a fire ele- mental while retaining a functional necklace of fireballs.  Casler Level: 5th; Prerequisites: Craft Wondrous Item, poly- morph self or wild shape ability; Market Price: 4,000 gp; Weight:',
-  'wild shape amulet',
+  'wild shape amulet: wslvl+4',
   'pearl of speech',
   'monks belt AC: +wis+1 = +5' ]

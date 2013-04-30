@@ -1,5 +1,5 @@
-lvl = 11;
-bab = 8
+lvl = 12;
+bab = 9
 basestats = {
     str: 10,
     dex: 11,
@@ -9,7 +9,7 @@ basestats = {
    cha: 13
 }
 specials = [
-    "unarmed monk: +0 1d6"
+//    "unarmed monk: +0 1d6"
 ];
 
 // aging p.109 - Middle age
@@ -23,7 +23,8 @@ basestats.cha++;
 */
 
 stats = Object.create(basestats);
-// ability increase at lvl 4 and lvl 8
+// ability increase at lvl 4 and lvl 8 and lvl 12
+stats.wis++;
 stats.wis++;
 stats.wis++;
 
@@ -31,7 +32,7 @@ stats.wis++;
 function mod(stat) { return Math.floor((stat-10)/2); }
 
 // # Hit points
-basehp = mod(basestats.con) * 9 + 8 + 3 + 3 + 7 + 4 + 5 + 4 + 7 + 6 + 6;
+basehp = mod(basestats.con) * 9 + 8 + 3 + 3 + 7 + 4 + 5 + 4 + 7 + 6 + 6 + 6;
 
 // Saves:
 
@@ -55,12 +56,12 @@ skillbase.knownature = 0;
 skillbase.profession_herbalist_poisonmaking = 0;
 
 // druid
-skillbase.concentration += 9;
-skillbase.listen += 9;
-skillbase.spot += 9;
-skillbase.survival += 9;
-skillbase.knownature += 9;
-skillbase.survival += 4; skillbase.knownature += 4; skillbase.profession_herbalist_poisonmaking += 1;
+skillbase.concentration += 10;
+skillbase.listen += 10;
+skillbase.spot += 10;
+skillbase.survival += 10;
+skillbase.knownature += 10;
+skillbase.survival += 4; skillbase.knownature += 4; skillbase.profession_herbalist_poisonmaking += 2;
 
 skillbase.wildempathy = lvl;
 
@@ -136,29 +137,38 @@ spelllist = [
 "1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.",
 "1 cure light wounds",
 "1 cure light wounds",
+"1 cure light wounds",
 
-"2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
-"2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
-"2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.",
-"2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.",
+"Cats grace +4dex",
+"//bull strength +4str",
 "2 earthbind",
+"Cats grace +4dex",
+"owl wisdom +4wis",
+"2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
 
+"//2 earthbind",
+"//2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
+"//2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
+"//2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.",
+
+"2 earthbind",
 "3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
 "3 Alter FortunePHB2: Fantastic spell. Great for emergencies (reroll a save!)",
 "3 Alter FortunePHB2: Fantastic spell. Great for emergencies (reroll a save!)",
 "3 BlindsightSC: 30' Blindsight. Who needs See Invisibility?",
-"3 Call Lightning: Calls down lightning bolts (3d6 per bolt) from sky 9 bolts within 9min.",
 
-"4 claws of savage",
-"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
-"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
-"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
+"4 resistance",
+"4 resistance",
+"X4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
+"X4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
 
-"5 Baleful Polymorph: Transforms subject into harmless animal.",
+"X4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
+"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
 "5 death ward",
 
 "6 superior resistance",
-"6 (spellstaffed) mummify",
+"6 superior resistance",
+"6 (spellstaffed) superior resistance",
 ];
 
 spells = { //{{{1
@@ -179,7 +189,7 @@ spells = { //{{{1
 "Resistance: Subject gains +1 bonus on saving throws.",
 "Virtue: Subject gains 1 temporary hp.",
 ],
-"1 x 5+1": //{{{2
+"1 x 5+2": //{{{2
 [
 "Pass without Trace: One subject/level leaves no tracks.",
 "Endure Elements: Exist comfortably in hot or cold environments.",
@@ -348,7 +358,7 @@ spells = { //{{{1
 "Spike Stones: Creatures in area take 1d8 damage, may be slowed.",
 "Summon Nature's Ally IV: Calls creature to fight.",
 ],
-"5 x 2+0": //{{{2
+"5 x 2+1": //{{{2
 [
 "Wall of Thorns: Thorns damage anyone who tries to pass. ",
 "Animal Growth: One animal/two levels doubles in size.",
@@ -652,7 +662,7 @@ console.log("poison: dc15, 1d4 con");
 
 console.log("items", [
     "3x Wilding Clasp: Appearing as a 3-inch-long gold chain, this item works only when attached to an amulet, vest, or similar item. The clasp prevents both itself and the attached item from melding into the wearer’s new form when transforming magic (such as polymorph self or wild shape) is used. The item is still worn in the same manner it previously was and remains available for use in the new form. For example, a druid with a wilding clasp attached to her periapt of Wisdom could use wild shape to become a wolf, but the periapt and the wilding clasp would remain in their normal forms, fully functional.  Some forms may be harmful to certain items; for in- stance, it would be unwise to take the form of a fire ele- mental while retaining a functional necklace of fireballs.  Casler Level: 5th; Prerequisites: Craft Wondrous Item, poly- morph self or wild shape ability; Market Price: 4,000 gp; Weight:",
-    "wild shape amulet",
+    "wild shape amulet: wslvl+4",
     "pearl of speech",
     "monks belt AC: +wis+1 = +5"
 ]);
