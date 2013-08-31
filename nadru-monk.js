@@ -391,7 +391,7 @@ spells = { //{{{1
 "UnhallowM: Designates location as unholy.",
 "Wall of Fire: Deals 2d4 fire damage out to 10 ft. and 1d4 out to 20 ft. Passing through wall deals 2d6 damage +1/level.",
 ],
-"6 x 1+0": //{{{2
+"6 x 2+0": //{{{2
 [
 "Antilife Shell: Exceedingly powerful defensive spell. Anything living without SR just can't touch you.",
 "Enveloping CocoonSC: This will let you turn the save of any number of nasty spells (Miasma and Baleful Polymorph being the nastiest) into a Reflex save, essentially, or just tie up one enemy that doesn't have a light/natural weapon handy (including incorporeal foes).",
@@ -564,7 +564,6 @@ specials = [
     "poison: dc11fort 1d6/1d6 con"
 ]
 print();
-*/
 
 console.log("\n\nbrown bear");
 move = "40ft walk"
@@ -584,6 +583,24 @@ specials = [
 ]
 print();
 
+console.log("\n\ndire tiger");
+move = "40ft walk"
+stats = Object.create(stats);
+stats.str = 27;
+stats.dex = 15;
+stats.con = 17;
+size = 1;
+naturalac = 6;
+specials = [
+	"claw: +0 2d4+8",
+	"claw: +0 2d4+8",
+	"bite: -5 2d6+4",
+    "Improved Grab (Ex): To use this ability, a dire tiger must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can rake.", 
+    "Pounce (Ex): If a dire tiger charges, it can make a full attack, including two rake specials.",
+    "Rake (Ex): Attack bonus +18 melee, damage 2d4+4.",
+    "Skills: Dire tigers have a +4 racial bonus on Hide and Move Silently checks."
+]
+print();
 console.log("\n\ndire bat");
 move = "20ft walk / 40ft fly"
 stats = Object.create(stats);
@@ -609,6 +626,7 @@ specials = [
     "bite +0 1"
 ]
 print();
+*/
 
 console.log("\n\nlegendary eagle");
 move = "10ft walk, 100ft fly average"
@@ -641,6 +659,7 @@ specials = [
 ]
 print();
 
+/*
 console.log("\n\nlegendary wolf");
 move = "60ft"
 stats = Object.create(stats);
@@ -652,6 +671,37 @@ naturalac = 5;
 specials = [
     "bite +0 2d6+10",
     "trip"
+]
+print();
+*/
+
+console.log("\n\nSaguaro Sentinel (huge plant 15ft/15ft)");
+move = "20ft"
+stats = Object.create(stats);
+stats.str = 33;
+stats.dex = 8;
+stats.con = 25;
+size = 2;
+naturalac = 15;
+specials = [
+    "slam: 3d6+11",
+    "NB: thorns any touch 1d6 dam",
+    "trample dc 27, 3d6+16"
+]
+print();
+
+console.log("\n\nDire tortoise (huge animal 15ft/10ft)");
+move = "20ft walk+burrow"
+stats = Object.create(stats);
+stats.str = 26;
+stats.dex = 6;
+stats.con = 25;
+size = 2;
+naturalac = 19;
+specials = [
+    "bite: 1d8+12",
+    "Lightning strike: automatic suprise round",
+    "trample dc 25, 4d8+12"
 ]
 print();
 
