@@ -32,7 +32,7 @@ stats.wis++;
 function mod(stat) { return Math.floor((stat-10)/2); }
 
 // # Hit points
-basehp = mod(basestats.con) * 9 + 8 + 3 + 3 + 7 + 4 + 5 + 4 + 7 + 6 + 6 + 6;
+basehp = mod(basestats.con) * 12 + 8 + 3 + 3 + 7 + 4 + 5 + 4 + 7 + 6 + 6 + 6 + 8;
 
 // Saves:
 
@@ -40,7 +40,7 @@ basehp = mod(basestats.con) * 9 + 8 + 3 + 3 + 7 + 4 + 5 + 4 + 7 + 6 + 6 + 6;
 // 
 skillbase = {};
 
-// 4(druid/monk) + 1(int) + 1(human) lvl 1-9 druid
+// 4(druid) + 1(int) + 1(human) lvl 1-9 druid
 //Concentration (Con), Craft (Int), Diplomacy (Cha), Handle Animal (Cha), Heal (Wis), Knowledge (nature) (Int), Listen (Wis), Profession (Wis), Ride (Dex), Spellcraft (Int), Spot (Wis), Survival (Wis), Swim (Str). 
 
 // druid 1 (TODO needs update)
@@ -56,11 +56,11 @@ skillbase.knownature = 0;
 skillbase.profession_herbalist_poisonmaking = 0;
 
 // druid
-skillbase.concentration += 10;
-skillbase.listen += 10;
-skillbase.spot += 10;
-skillbase.survival += 10;
-skillbase.knownature += 10;
+skillbase.concentration += 11;
+skillbase.listen += 11;
+skillbase.spot += 11;
+skillbase.survival += 11;
+skillbase.knownature += 11;
 skillbase.survival += 4; skillbase.knownature += 4; skillbase.profession_herbalist_poisonmaking += 2;
 
 skillbase.wildempathy = lvl;
@@ -139,36 +139,32 @@ spelllist = [
 "1 cure light wounds",
 "1 cure light wounds",
 
-"Cats grace +4dex",
-"//bull strength +4str",
-"2 earthbind",
-"Cats grace +4dex",
-"owl wisdom +4wis",
 "2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
+"2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
+"2 Halo of SandSand: +4 deflection Yet another druid AC buff. This one is deflection, though, so it stacks with Barkskin and armor.",
+"2 Halo of SandSand: +4 deflection Yet another druid AC buff. This one is deflection, though, so it stacks with Barkskin and armor.",
+"2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.",
 
-"//2 earthbind",
-"//2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
-"//2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
-"//2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.",
-
-"2 earthbind",
+"3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
 "3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
 "3 Alter FortunePHB2: Fantastic spell. Great for emergencies (reroll a save!)",
-"3 Alter FortunePHB2: Fantastic spell. Great for emergencies (reroll a save!)",
+"3 BlindsightSC: 30' Blindsight. Who needs See Invisibility?",
 "3 BlindsightSC: 30' Blindsight. Who needs See Invisibility?",
 
-"4 resistance",
-"4 resistance",
-"X4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
-"X4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
-
-"X4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
 "4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
-"5 death ward",
+"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
+"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
+"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
+
+"4 raised Flame Strike: Smite foes with Divine fire (1d6/level damage).",
+"5 bite of the weretiger",
+"5 baleful polymorph",
+
+"÷5+6 control winds + sandstorm",
 
 "6 superior resistance",
-"6 superior resistance",
-"6 (spellstaffed) superior resistance",
+"6 drown",
+"6 (spellstaffed) mummify",
 ];
 
 spells = { //{{{1
@@ -423,7 +419,7 @@ naturalac = 0;
 // Armor class
 // same touch and 
 function ac() {
-    var monksBelt = 5;
+    var monksBelt = 1 + mod(stats.wis);
     var fullac = 10 + naturalac + mod(stats.dex) - size + monksBelt;
     return { touch: fullac - naturalac,
              flatfooted: fullac - mod(stats.dex),

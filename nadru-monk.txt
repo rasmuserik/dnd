@@ -7,24 +7,24 @@ int 13 1
 cha 13 1
 move: 30ft
 initiative:  4
-skills: { concentration: 17,
-  listen: 19,
-  spot: 19,
+skills: { concentration: 18,
+  listen: 20,
+  spot: 20,
   movesilent: 0,
   hide: 0,
   tumble: 0,
-  survival: 23,
-  knownature: 17,
+  survival: 24,
+  knownature: 18,
   profession_herbalist_poisonmaking: 7,
   wildempathy: 13 }
 saves: { fortitude: 10, reflex: 3, will: 12 }
-ac: { touch: 15, flatfooted: 15, normal: 15 }
+ac: { touch: 16, flatfooted: 16, normal: 16 }
 attack: + 9
 ranged attack: + 9
 grapple:  13
 dambonus: 0
 specials: []
-hp: 86
+hp: 103
 feats: { 'Spell Focus Conjuration': '+1 difficulty class',
   'improved initiative': 'initiative +4',
   'Augment Summoning': '+4con +4str to summons',
@@ -245,7 +245,7 @@ spells: { '0 x 6':
      'Transmute Rock to Mud: Transforms two 10-ft. cubes per level.',
      'UnhallowM: Designates location as unholy.',
      'Wall of Fire: Deals 2d4 fire damage out to 10 ft. and 1d4 out to 20 ft. Passing through wall deals 2d6 damage +1/level.' ],
-  '6 x 1+0': 
+  '6 x 2+0': 
    [ 'Antilife Shell: Exceedingly powerful defensive spell. Anything living without SR just can\'t touch you.',
      'Enveloping CocoonSC: This will let you turn the save of any number of nasty spells (Miasma and Baleful Polymorph being the nastiest) into a Reflex save, essentially, or just tie up one enemy that doesn\'t have a light/natural weapon handy (including incorporeal foes).',
      'Find the Path: Never, ever, EVER be lost.',
@@ -265,128 +265,6 @@ spells: { '0 x 6':
      'Greater Scrying: Scrying without the long casting time and relatively short duration; the minor spells you can cast through the sensor aren\'t that useful.' ] }
 
 
-brown bear
-str 27 8
-dex 13 1
-con 19 4
-wis 20 5
-int 13 1
-cha 13 1
-move: 40ft walk
-initiative:  5
-skills: { concentration: 18,
-  listen: 19,
-  spot: 19,
-  movesilent: 1,
-  hide: -3,
-  tumble: 1,
-  survival: 23,
-  knownature: 17,
-  profession_herbalist_poisonmaking: 7,
-  wildempathy: 13 }
-saves: { fortitude: 11, reflex: 4, will: 12 }
-ac: { touch: 15, flatfooted: 19, normal: 20 }
-attack: + 16
-ranged attack: + 9
-grapple:  25
-dambonus: 8
-specials: [ 'claw: +0 1d8',
-  'claw: +0 1d8',
-  'bite: -5 2d6',
-  'Improved Grab (Ex): To use this ability, a brown bear must hit with a claw attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity.',
-  'Skills: A brown bear has a +4 racial bonus on Swim checks. ' ]
-
-
-dire tiger
-str 27 8
-dex 15 2
-con 17 3
-wis 20 5
-int 13 1
-cha 13 1
-move: 40ft walk
-initiative:  6
-skills: { concentration: 17,
-  listen: 19,
-  spot: 19,
-  movesilent: 2,
-  hide: -2,
-  tumble: 2,
-  survival: 23,
-  knownature: 17,
-  profession_herbalist_poisonmaking: 7,
-  wildempathy: 13 }
-saves: { fortitude: 10, reflex: 5, will: 12 }
-ac: { touch: 16, flatfooted: 20, normal: 22 }
-attack: + 16
-ranged attack: + 10
-grapple:  25
-dambonus: 8
-specials: [ 'claw: +0 2d4+8',
-  'claw: +0 2d4+8',
-  'bite: -5 2d6+4',
-  'Improved Grab (Ex): To use this ability, a dire tiger must hit with its bite attack. It can then attempt to start a grapple as a free action without provoking an attack of opportunity. If it wins the grapple check, it establishes a hold and can rake.',
-  'Pounce (Ex): If a dire tiger charges, it can make a full attack, including two rake specials.',
-  'Rake (Ex): Attack bonus +18 melee, damage 2d4+4.',
-  'Skills: Dire tigers have a +4 racial bonus on Hide and Move Silently checks.' ]
-
-
-dire bat
-str 17 3
-dex 22 6
-con 17 3
-wis 20 5
-int 13 1
-cha 13 1
-move: 20ft walk / 40ft fly
-initiative:  10
-skills: { concentration: 17,
-  listen: 19,
-  spot: 19,
-  movesilent: 6,
-  hide: 2,
-  tumble: 6,
-  survival: 23,
-  knownature: 17,
-  profession_herbalist_poisonmaking: 7,
-  wildempathy: 13 }
-saves: { fortitude: 10, reflex: 9, will: 12 }
-ac: { touch: 20, flatfooted: 19, normal: 25 }
-attack: + 11
-ranged attack: + 14
-grapple:  20
-dambonus: 3
-specials: [ 'bite +0 1d8' ]
-
-
-tiny viper
-str 4 -3
-dex 17 3
-con 11 0
-wis 20 5
-int 13 1
-cha 13 1
-move: 15ft walk/climb/swim
-initiative:  7
-skills: { concentration: 14,
-  listen: 19,
-  spot: 19,
-  movesilent: 3,
-  hide: 11,
-  tumble: 3,
-  survival: 23,
-  knownature: 17,
-  profession_herbalist_poisonmaking: 7,
-  wildempathy: 13 }
-saves: { fortitude: 7, reflex: 6, will: 12 }
-ac: { touch: 20, flatfooted: 19, normal: 22 }
-attack: + 8
-ranged attack: + 14
-grapple:  2
-dambonus: -3
-specials: [ 'bite +0 1' ]
-
-
 legendary eagle
 str 15 2
 dex 30 10
@@ -396,18 +274,18 @@ int 13 1
 cha 13 1
 move: 10ft walk, 100ft fly average
 initiative:  14
-skills: { concentration: 17,
-  listen: 19,
-  spot: 19,
+skills: { concentration: 18,
+  listen: 20,
+  spot: 20,
   movesilent: 10,
   hide: 14,
   tumble: 10,
-  survival: 23,
-  knownature: 17,
+  survival: 24,
+  knownature: 18,
   profession_herbalist_poisonmaking: 7,
   wildempathy: 13 }
 saves: { fortitude: 10, reflex: 13, will: 12 }
-ac: { touch: 26, flatfooted: 20, normal: 30 }
+ac: { touch: 27, flatfooted: 21, normal: 31 }
 attack: + 12
 ranged attack: + 20
 grapple:  11
@@ -424,18 +302,18 @@ int 13 1
 cha 13 1
 move: 40ft walk, 20ft climb
 initiative:  7
-skills: { concentration: 17,
-  listen: 19,
-  spot: 19,
+skills: { concentration: 18,
+  listen: 20,
+  spot: 20,
   movesilent: 3,
   hide: 3,
   tumble: 3,
-  survival: 23,
-  knownature: 17,
+  survival: 24,
+  knownature: 18,
   profession_herbalist_poisonmaking: 7,
   wildempathy: 13 }
 saves: { fortitude: 10, reflex: 6, will: 12 }
-ac: { touch: 18, flatfooted: 21, normal: 24 }
+ac: { touch: 19, flatfooted: 22, normal: 25 }
 attack: + 19
 ranged attack: + 12
 grapple:  23
@@ -444,34 +322,6 @@ specials: [ 'claw +0 1d8+10',
   'claw +0 1d8+10',
   'bite -5 2d6+5',
   'rend on both claws, 2d8+15' ]
-
-
-legendary wolf
-str 25 7
-dex 28 9
-con 21 5
-wis 20 5
-int 13 1
-cha 13 1
-move: 60ft
-initiative:  13
-skills: { concentration: 19,
-  listen: 19,
-  spot: 19,
-  movesilent: 9,
-  hide: 9,
-  tumble: 9,
-  survival: 23,
-  knownature: 17,
-  profession_herbalist_poisonmaking: 7,
-  wildempathy: 13 }
-saves: { fortitude: 12, reflex: 12, will: 12 }
-ac: { touch: 24, flatfooted: 20, normal: 29 }
-attack: + 16
-ranged attack: + 18
-grapple:  20
-dambonus: 7
-specials: [ 'bite +0 2d6+10', 'trip' ]
 
 
 Saguaro Sentinel (huge plant 15ft/15ft)
@@ -483,18 +333,18 @@ int 13 1
 cha 13 1
 move: 20ft
 initiative:  3
-skills: { concentration: 21,
-  listen: 19,
-  spot: 19,
+skills: { concentration: 22,
+  listen: 20,
+  spot: 20,
   movesilent: -1,
   hide: -9,
   tumble: -1,
-  survival: 23,
-  knownature: 17,
+  survival: 24,
+  knownature: 18,
   profession_herbalist_poisonmaking: 7,
   wildempathy: 13 }
 saves: { fortitude: 14, reflex: 2, will: 12 }
-ac: { touch: 12, flatfooted: 28, normal: 27 }
+ac: { touch: 13, flatfooted: 29, normal: 28 }
 attack: + 18
 ranged attack: + 6
 grapple:  32
@@ -513,18 +363,18 @@ int 13 1
 cha 13 1
 move: 20ft walk+burrow
 initiative:  2
-skills: { concentration: 21,
-  listen: 19,
-  spot: 19,
+skills: { concentration: 22,
+  listen: 20,
+  spot: 20,
   movesilent: -2,
   hide: -10,
   tumble: -2,
-  survival: 23,
-  knownature: 17,
+  survival: 24,
+  knownature: 18,
   profession_herbalist_poisonmaking: 7,
   wildempathy: 13 }
 saves: { fortitude: 14, reflex: 1, will: 12 }
-ac: { touch: 11, flatfooted: 32, normal: 30 }
+ac: { touch: 12, flatfooted: 33, normal: 31 }
 attack: + 15
 ranged attack: + 5
 grapple:  29
@@ -545,31 +395,27 @@ specials: [ 'bite: 1d8+12',
   '1 cure light wounds',
   '1 cure light wounds',
   '1 cure light wounds',
-  'Cats grace +4dex',
-  '//bull strength +4str',
-  '2 earthbind',
-  'Cats grace +4dex',
-  'owl wisdom +4wis',
   '2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
-  '//2 earthbind',
-  '//2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
-  '//2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
-  '//2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.',
-  '2 earthbind',
+  '2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
+  '2 Halo of SandSand: +4 deflection Yet another druid AC buff. This one is deflection, though, so it stacks with Barkskin and armor.',
+  '2 Halo of SandSand: +4 deflection Yet another druid AC buff. This one is deflection, though, so it stacks with Barkskin and armor.',
+  '2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.',
+  '3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ',
   '3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ',
   '3 Alter FortunePHB2: Fantastic spell. Great for emergencies (reroll a save!)',
-  '3 Alter FortunePHB2: Fantastic spell. Great for emergencies (reroll a save!)',
   '3 BlindsightSC: 30\' Blindsight. Who needs See Invisibility?',
-  '4 resistance',
-  '4 resistance',
-  'X4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
-  'X4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
-  'X4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
+  '3 BlindsightSC: 30\' Blindsight. Who needs See Invisibility?',
   '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
-  '5 death ward',
+  '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
+  '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
+  '4 Flame Strike: Smite foes with Divine fire (1d6/level damage).',
+  '4 raised Flame Strike: Smite foes with Divine fire (1d6/level damage).',
+  '5 bite of the weretiger',
+  '5 baleful polymorph',
+  '÷5+6 control winds + sandstorm',
   '6 superior resistance',
-  '6 superior resistance',
-  '6 (spellstaffed) superior resistance' ]
+  '6 drown',
+  '6 (spellstaffed) mummify' ]
 poison: dc15, 1d4 con
 items [ '3x Wilding Clasp: Appearing as a 3-inch-long gold chain, this item works only when attached to an amulet, vest, or similar item. The clasp prevents both itself and the attached item from melding into the wearer’s new form when transforming magic (such as polymorph self or wild shape) is used. The item is still worn in the same manner it previously was and remains available for use in the new form. For example, a druid with a wilding clasp attached to her periapt of Wisdom could use wild shape to become a wolf, but the periapt and the wilding clasp would remain in their normal forms, fully functional.  Some forms may be harmful to certain items; for in- stance, it would be unwise to take the form of a fire ele- mental while retaining a functional necklace of fireballs.  Casler Level: 5th; Prerequisites: Craft Wondrous Item, poly- morph self or wild shape ability; Market Price: 4,000 gp; Weight:',
   'wild shape amulet: wslvl+4',
