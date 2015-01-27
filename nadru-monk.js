@@ -1,5 +1,5 @@
-lvl = 12;
-bab = 9
+lvl = 14;
+bab = 10
 basestats = {
     str: 10,
     dex: 11,
@@ -9,7 +9,6 @@ basestats = {
    cha: 13
 }
 specials = [
-//    "unarmed monk: +0 1d6"
 ];
 
 // aging p.109 - Middle age
@@ -32,7 +31,7 @@ stats.wis++;
 function mod(stat) { return Math.floor((stat-10)/2); }
 
 // # Hit points
-basehp = mod(basestats.con) * 12 + 8 + 3 + 3 + 7 + 4 + 5 + 4 + 7 + 6 + 6 + 6 + 8;
+basehp = mod(basestats.con) * lvl + 8 + 3 + 3 + 7 + 4 + 5 + 4 + 7 + 6 + 6 + 6 + 8 + 8 + 1; 
 
 // Saves:
 
@@ -40,28 +39,20 @@ basehp = mod(basestats.con) * 12 + 8 + 3 + 3 + 7 + 4 + 5 + 4 + 7 + 6 + 6 + 6 + 8
 // 
 skillbase = {};
 
-// 4(druid) + 1(int) + 1(human) lvl 1-9 druid
+// 4(druid) + 1(int) + 1(human) lvl 1-14 druid
 //Concentration (Con), Craft (Int), Diplomacy (Cha), Handle Animal (Cha), Heal (Wis), Knowledge (nature) (Int), Listen (Wis), Profession (Wis), Ride (Dex), Spellcraft (Int), Spot (Wis), Survival (Wis), Swim (Str). 
 
-// druid 1 (TODO needs update)
-skillbase.concentration = 4;
-skillbase.listen = 4;
-skillbase.spot = 4;
+skillbase.concentration = 3 + lvl;
+skillbase.listen = 3 + lvl;
+skillbase.spot = 3 + lvl;
+skillbase.survival = 3 + lvl;
+skillbase.knownature = 3 + lvl;
 
+// NB: missing 1+lvl
 skillbase.movesilent = 0;
 skillbase.hide = 0;
 skillbase.tumble = 0;
-skillbase.survival = 0;
-skillbase.knownature = 0;
-skillbase.profession_herbalist_poisonmaking = 0;
-
-// druid
-skillbase.concentration += 11;
-skillbase.listen += 11;
-skillbase.spot += 11;
-skillbase.survival += 11;
-skillbase.knownature += 11;
-skillbase.survival += 4; skillbase.knownature += 4; skillbase.profession_herbalist_poisonmaking += 2;
+skillbase.profession_herbalist_poisonmaking = 2;
 
 skillbase.wildempathy = lvl;
 
@@ -109,8 +100,8 @@ feats = {
 "Natural spell": "casting in wild shape",
 // lvl9
 "offset material": "",
-//"Leadership": "attract cohort and followers"}
-}
+// lvl12
+"Leadership": "attract cohort and followers"}
 classes = {
 // druid
 "animal companion": "gain animal after 24hr ritual",
@@ -120,51 +111,27 @@ classes = {
 "trackless step": "untrackable",
 "resist natures lure ": "+4 save vs. fey spell-like ability",
 "wild shape": "3 times per day 8hrs, small, medium, large. heal like a days rest when shifting",
-"venom immunity": "Immune to all poison"
+"venom immunity": "Immune to all poison",
+"thousand faces": "alter self at will"
 }
 
 spelllist = [
-"0 Light: Object shines like a torch.",
-"0 Light: Object shines like a torch.",
-"0 Light: Object shines like a torch.",
-"Guidance: +1 on one attack roll, saving throw, or skill check.",
-"Guidance: +1 on one attack roll, saving throw, or skill check.",
-"Guidance: +1 on one attack roll, saving throw, or skill check.",
-
-"1 Obscuring Mist: Fog surrounds you.",
-"1 Endure Elements: Exist comfortably in hot or cold environments.",
-"1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.",
-"1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.",
-"1 cure light wounds",
-"1 cure light wounds",
-"1 cure light wounds",
-
-"2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
-"2 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
-"2 Halo of SandSand: +4 deflection Yet another druid AC buff. This one is deflection, though, so it stacks with Barkskin and armor.",
-"2 Halo of SandSand: +4 deflection Yet another druid AC buff. This one is deflection, though, so it stacks with Barkskin and armor.",
-"2 Blinding SpittleSC: . Blindness with no save, with a ranged touch attack at+4.",
-
-"3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
-"3 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
-"3 Alter FortunePHB2: Fantastic spell. Great for emergencies (reroll a save!)",
-"3 BlindsightSC: 30' Blindsight. Who needs See Invisibility?",
-"3 BlindsightSC: 30' Blindsight. Who needs See Invisibility?",
-
-"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
-"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
-"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
-"4 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
-
-"4 raised Flame Strike: Smite foes with Divine fire (1d6/level damage).",
-"5 bite of the weretiger",
-"5 baleful polymorph",
-
-"÷5+6 control winds + sandstorm",
-
-"6 superior resistance",
-"6 drown",
-"6 (spellstaffed) mummify",
+"spell-save = 10 + spell-level + wis-modifier",
+"0 x3 Light: Object shines like a torch.",
+"0 x3 Guidance: +1 on one attack roll, saving throw, or skill check.",
+"1 x1 Obscuring Mist: Fog surrounds you.",
+"1 x1 Endure Elements: Exist comfortably in hot or cold environments.",
+"1 x1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.",
+"1 x4 cure light wounds 1d8+5",
+"2 x4 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
+"2 x2 Halo of SandSand: +4 deflection AC, personal, 10min/lvl",
+"3 x2 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
+"3 x3 BlindsightSC: 30' Blindsight. touch 1 min/level",
+"4 x5 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
+"5 x2 anticold sphere sc - cold immunity + creatures with cold-subtype cannot enter for all creatures within 10ft radius on self",
+"5 x2 1hr lvl/2 insight bonus to wis +7",
+"6 x3 superior resistance +6 to all resistance check for 24hrs",
+"7 x2+spellstaffed heal lvl*10",
 ];
 
 spells = { //{{{1
@@ -221,7 +188,7 @@ spells = { //{{{1
 "Shillelagh: Cudgel or quarterstaff becomes +1 weapon (1d10 damage) for 1 min./level.",
 "Summon Nature's Ally I: Calls creature to fight.",
 ],
-"2 x 4+1": //{{{2
+"2 x 5+1": //{{{2
 [
 "Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
 "Bear's Endurance: Subject gains +4 to Con for 1 min./level.",
@@ -318,7 +285,7 @@ spells = { //{{{1
 "Summon Nature's Ally III: Calls creature to fight.",
 "Water Breathing: Subjects can breathe underwater.",
 ],
-"4 x 3+1": //{{{2
+"4 x 4+1": //{{{2
 [
 "ScryingF: Spies on subject from a distance.",
 "Flame Strike: Smite foes with Divine fire (1d6/level damage).",
@@ -354,7 +321,7 @@ spells = { //{{{1
 "Spike Stones: Creatures in area take 1d8 damage, may be slowed.",
 "Summon Nature's Ally IV: Calls creature to fight.",
 ],
-"5 x 2+1": //{{{2
+"5 x 3+1": //{{{2
 [
 "Wall of Thorns: Thorns damage anyone who tries to pass. ",
 "Animal Growth: One animal/two levels doubles in size.",
@@ -387,7 +354,7 @@ spells = { //{{{1
 "UnhallowM: Designates location as unholy.",
 "Wall of Fire: Deals 2d4 fire damage out to 10 ft. and 1d4 out to 20 ft. Passing through wall deals 2d6 damage +1/level.",
 ],
-"6 x 2+0": //{{{2
+"6 x 3+0": //{{{2
 [
 "Antilife Shell: Exceedingly powerful defensive spell. Anything living without SR just can't touch you.",
 "Enveloping CocoonSC: This will let you turn the save of any number of nasty spells (Miasma and Baleful Polymorph being the nastiest) into a Reflex save, essentially, or just tie up one enemy that doesn't have a light/natural weapon handy (including incorporeal foes).",
@@ -406,6 +373,13 @@ spells = { //{{{1
 "Liveoak: Handy if you need a Treant to guard your camp or home. The casting time and casting limitations limit its general usefulness, though.",
 "Greater Dispel Magic: Unlike mages and clerics, druids very rarely lose caster levels, so this is often a worthwhile spell to prep.",
 "Greater Scrying: Scrying without the long casting time and relatively short duration; the minor spells you can cast through the sensor aren't that useful.",
+],
+"7 x 2+0": //{{{2
+[
+"heal",
+"Transmut metal to wood",
+"wind walk self + lvl/3 ppl",
+"firestorm"
 ],
 }
 //{{{1
@@ -429,9 +403,9 @@ function ac() {
 // saves
 function saves() {
     return {
-	fortitude: mod(stats.con) + 7,
-	reflex: mod(stats.dex) + 3,
-	will: mod(stats.wis) + 7,
+	fortitude: mod(stats.con) + 9,
+	reflex: mod(stats.dex) + 4,
+	will: mod(stats.wis) + 9,
     }
 }
 // movement
@@ -462,12 +436,12 @@ print();
 console.log("hp:", basehp);
 console.log("feats:", feats);
 console.log("class:", classes);
-console.log("spells:", spells);
+//console.log("spells:", spells);
 
 // wild shapes
 
 /*
-console.log("\n\ndire lion");
+console.log("\n\ndire lion"); //{{{2
 move = "40ft walk"
 stats = Object.create(stats);
 stats.str = 25;
@@ -486,7 +460,7 @@ specials = [
 ]
 print();
 
-console.log("\n\ndire wolf");
+console.log("\n\ndire wolf"); //{{{2
 move = "50ft walk"
 stats = Object.create(stats);
 stats.str = 25;
@@ -501,7 +475,7 @@ specials = [
 ]
 print();
 
-console.log("\n\nrhinoceros");
+console.log("\n\nrhinoceros"); //{{{2
 move = "30ft walk"
 stats = Object.create(stats);
 stats.str = 26;
@@ -515,7 +489,7 @@ specials = [
 ]
 print();
 
-console.log("\n\neagle");
+console.log("\n\neagle"); //{{{2
 move = "10ft walk / 80ft fly"
 stats = Object.create(stats);
 stats.str = 10;
@@ -531,7 +505,7 @@ specials = [
 ]
 print();
 
-console.log("\n\ndire hawk");
+console.log("\n\ndire hawk"); //{{{2
 move = "10ft walk / 80ft fly"
 stats = Object.create(stats);
 stats.str = 12;
@@ -547,7 +521,7 @@ specials = [
 ]
 print();
 
-console.log("\n\nlarge viper");
+console.log("\n\nlarge viper"); //{{{2
 move = "20ft walk/climb/swim"
 stats = Object.create(stats);
 stats.str = 10;
@@ -561,7 +535,7 @@ specials = [
 ]
 print();
 
-console.log("\n\nbrown bear");
+console.log("\n\nbrown bear"); //{{{2
 move = "40ft walk"
 stats = Object.create(stats);
 stats.str = 27;
@@ -579,7 +553,7 @@ specials = [
 ]
 print();
 
-console.log("\n\ndire tiger");
+console.log("\n\ndire tiger"); //{{{2
 move = "40ft walk"
 stats = Object.create(stats);
 stats.str = 27;
@@ -597,7 +571,8 @@ specials = [
     "Skills: Dire tigers have a +4 racial bonus on Hide and Move Silently checks."
 ]
 print();
-console.log("\n\ndire bat");
+
+console.log("\n\ndire bat"); //{{{2
 move = "20ft walk / 40ft fly"
 stats = Object.create(stats);
 stats.str = 17;
@@ -610,7 +585,7 @@ specials = [
 ]
 print();
 
-console.log("\n\ntiny viper");
+console.log("\n\ntiny viper"); //{{{2
 move = "15ft walk/climb/swim"
 stats = Object.create(stats);
 stats.str = 4;
@@ -624,7 +599,7 @@ specials = [
 print();
 */
 
-console.log("\n\nlegendary eagle");
+console.log("\n\nlegendary eagle"); //{{{2
 move = "10ft walk, 100ft fly average"
 stats = Object.create(stats);
 stats.str = 15;
@@ -639,7 +614,7 @@ specials = [
 ];
 print();
 
-console.log("\n\nlegendary ape");
+console.log("\n\nlegendary ape"); //{{{2
 move = "40ft walk, 20ft climb"
 stats = Object.create(stats);
 stats.str = 30;
@@ -656,7 +631,7 @@ specials = [
 print();
 
 /*
-console.log("\n\nlegendary wolf");
+console.log("\n\nlegendary wolf"); //{{{2
 move = "60ft"
 stats = Object.create(stats);
 stats.str = 25;
@@ -669,9 +644,8 @@ specials = [
     "trip"
 ]
 print();
-*/
 
-console.log("\n\nSaguaro Sentinel (huge plant 15ft/15ft)");
+console.log("\n\nSaguaro Sentinel (huge plant 15ft/15ft)"); //{{{2
 move = "20ft"
 stats = Object.create(stats);
 stats.str = 33;
@@ -686,7 +660,7 @@ specials = [
 ]
 print();
 
-console.log("\n\nDire tortoise (huge animal 15ft/10ft)");
+console.log("\n\nDire tortoise (huge animal 15ft/10ft)"); //{{{2
 move = "20ft walk+burrow"
 stats = Object.create(stats);
 stats.str = 26;
@@ -702,7 +676,25 @@ specials = [
 print();
 
 
-console.log(spelllist);
+*/
+console.log("\n\nDire Polar Bear (huge animal 15ft/10ft)"); //{{{2
+move = "50ft walk, 20ft swim"
+stats = Object.create(stats);
+stats.str = 39;
+stats.dex = 11;
+stats.con = 23;
+size = 2;
+naturalac = 11;
+specials = [
+    "claw: +0 2d6+14",
+    "claw: +0 2d6+14",
+    "bite: -5 3d8+7",
+    "grapple as free action on claw atack"
+]
+print();
+
+
+console.log(spelllist); //{{{2
 
 console.log("poison: dc15, 1d4 con");
 
@@ -712,3 +704,5 @@ console.log("items", [
     "pearl of speech",
     "monks belt AC: +wis+1 = +5"
 ]);
+
+console.log("buffed: saves +6, ac +11 (wis+3(7),natural+4,deflection+4), attack+1");
