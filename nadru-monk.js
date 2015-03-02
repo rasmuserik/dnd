@@ -1,5 +1,5 @@
 lvl = 14;
-bab = 10
+bab = 10;
 basestats = {
     str: 10,
     dex: 11,
@@ -31,7 +31,7 @@ stats.wis++;
 function mod(stat) { return Math.floor((stat-10)/2); }
 
 // # Hit points
-basehp = mod(basestats.con) * lvl + 8 + 3 + 3 + 7 + 4 + 5 + 4 + 7 + 6 + 6 + 6 + 8 + 8 + 1; 
+basehp = mod(basestats.con) * lvl + 8 + 3 + 3 + 7 + 4 + 5 + 4 + 7 + 6 + 6 + 6 + 8 + 6 + 6; 
 
 // Saves:
 
@@ -117,21 +117,38 @@ classes = {
 
 spelllist = [
 "spell-save = 10 + spell-level + wis-modifier",
-"0 x3 Light: Object shines like a torch.",
-"0 x3 Guidance: +1 on one attack roll, saving throw, or skill check.",
+"0 x2 conjure water",
+"0 x2 Light: Object shines like a torch.",
+"0 x2 Guidance: +1 on one attack roll, saving throw, or skill check.",
 "1 x1 Obscuring Mist: Fog surrounds you.",
 "1 x1 Endure Elements: Exist comfortably in hot or cold environments.",
 "1 x1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.",
-"1 x4 cure light wounds 1d8+5",
+".1 x4 cure light wounds 1d8+5",
 "2 x4 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl",
 "2 x2 Halo of SandSand: +4 deflection AC, personal, 10min/lvl",
 "3 x2 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
 "3 x3 BlindsightSC: 30' Blindsight. touch 1 min/level",
 "4 x5 Flame Strike: Smite foes with Divine fire (1d6/level damage).",
-"5 x2 anticold sphere sc - cold immunity + creatures with cold-subtype cannot enter for all creatures within 10ft radius on self",
+"5 x0 anticold sphere sc - cold immunity + creatures with cold-subtype cannot enter for all creatures within 10ft radius on self",
 "5 x2 1hr lvl/2 insight bonus to wis +7",
+"5 x2 control winds",
 "6 x3 superior resistance +6 to all resistance check for 24hrs",
-"7 x2+spellstaffed heal lvl*10",
+"7 control weather | wind walk",
+"7 x0+spellstaffed heal lvl*10",
+];
+spelllist = [
+"spell-save = 10 + spell-level + wis-modifier",
+"0 x6 light (10 min/level = 14hr total).",
+"1 x1 endure elements",
+"1 x6 faerie fire",
+"2 x6 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl = 14hr total",
+"3 x3 barkskin",
+"3 x2 Magic Fang, Greater: One natural weapon of subject creature gets +1/four levels on attack and damage rolls (max +5) or +1 to all. 1hr/lvl ",
+"4 x3 barkskin.",
+"4 x2 enhance wildshape - bat blindsight.",
+"5 x4 cure-critical 4d8+14 heal",
+"6 x3 superior resistance +6 to all resistance check for 24hrs",
+"7 x2 heal",
 ];
 
 spells = { //{{{1
@@ -693,6 +710,20 @@ specials = [
 ]
 print();
 
+
+console.log("\n\ndesmodu hunting bat"); //{{{2
+move = "20ft walk, 60ft fly good"
+stats = Object.create(stats);
+stats.str = 15;
+stats.dex = 24;
+stats.con = 13;
+size = 0;
+naturalac = 3;
+specials = [
+    "bite 1d6+3",
+    "blindsight 120'"
+]
+print();
 
 console.log(spelllist); //{{{2
 
