@@ -730,6 +730,21 @@ specials = [
 ]
 print();
 
+console.log("\n\nlarge earth elemental"); //{{{2
+move = "20ft"
+stats = Object.create(stats);
+stats.str = 25;
+stats.dex = 8;
+stats.con = 19;
+size = 1;
+naturalac = 10;
+specials = [
+    "2xslam 2d8+7",
+    "cleave, greater cleave, power-attack",
+    "dr5/magic earth glide darkvision 60ft"
+]
+print();
+
 console.log(spelllist); //{{{2
 
 console.log("poison: dc15, 1d4 con");

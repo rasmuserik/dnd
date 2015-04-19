@@ -164,8 +164,8 @@ specials: [ 'bite 1d6+3', 'blindsight 120\'' ]
   '0 x2 Guidance: +1 on one attack roll, saving throw, or skill check.',
   '1 x1 Obscuring Mist: Fog surrounds you.',
   '1 x1 Endure Elements: Exist comfortably in hot or cold environments.',
-  '1 x1 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.',
-  '1 x4 cure light wounds 1d8+5',
+  '1 x3 Faerie Fire: Outlines subjects with light, canceling blur, concealment, and the like.',
+  '1 x2 cure light wounds 1d8+5',
   '2 x1 Soften stone',
   '2 x3 Barkskin: Grants +1 (+1/3lvl, max +5 total) (+4) enhancement to natural armor. 10 min/lvl',
   '2 x2 Halo of SandSand: +4 deflection AC, personal, 10min/lvl',
@@ -178,8 +178,8 @@ specials: [ 'bite 1d6+3', 'blindsight 120\'' ]
   '5 x0 control winds',
   '6 x2 superior resistance +6 to all resistance check for 24hrs',
   '6 x1 mummify',
-  '7 x0 control weather | wind walk',
-  '7 x1 firestorm',
+  '7 x1 wind walk',
+  '7 x0 firestorm',
   '7 x1+spellstaffed heal lvl*10' ]
 poison: dc15, 1d4 con
 items [ '3x Wilding Clasp: Appearing as a 3-inch-long gold chain, this item works only when attached to an amulet, vest, or similar item. The clasp prevents both itself and the attached item from melding into the wearer’s new form when transforming magic (such as polymorph self or wild shape) is used. The item is still worn in the same manner it previously was and remains available for use in the new form. For example, a druid with a wilding clasp attached to her periapt of Wisdom could use wild shape to become a wolf, but the periapt and the wilding clasp would remain in their normal forms, fully functional.  Some forms may be harmful to certain items; for in- stance, it would be unwise to take the form of a fire ele- mental while retaining a functional necklace of fireballs.  Casler Level: 5th; Prerequisites: Craft Wondrous Item, poly- morph self or wild shape ability; Market Price: 4,000 gp; Weight:',
