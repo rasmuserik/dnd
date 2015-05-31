@@ -750,9 +750,10 @@ console.log(spelllist); //{{{2
 console.log("poison: dc15, 1d4 con");
 
 console.log("items", [
-    "3x Wilding Clasp: Appearing as a 3-inch-long gold chain, this item works only when attached to an amulet, vest, or similar item. The clasp prevents both itself and the attached item from melding into the wearer’s new form when transforming magic (such as polymorph self or wild shape) is used. The item is still worn in the same manner it previously was and remains available for use in the new form. For example, a druid with a wilding clasp attached to her periapt of Wisdom could use wild shape to become a wolf, but the periapt and the wilding clasp would remain in their normal forms, fully functional.  Some forms may be harmful to certain items; for in- stance, it would be unwise to take the form of a fire ele- mental while retaining a functional necklace of fireballs.  Casler Level: 5th; Prerequisites: Craft Wondrous Item, poly- morph self or wild shape ability; Market Price: 4,000 gp; Weight:",
+    "4x Wilding Clasp: Appearing as a 3-inch-long gold chain, this item works only when attached to an amulet, vest, or similar item. The clasp prevents both itself and the attached item from melding into the wearer’s new form when transforming magic (such as polymorph self or wild shape) is used. The item is still worn in the same manner it previously was and remains available for use in the new form. For example, a druid with a wilding clasp attached to her periapt of Wisdom could use wild shape to become a wolf, but the periapt and the wilding clasp would remain in their normal forms, fully functional.  Some forms may be harmful to certain items; for in- stance, it would be unwise to take the form of a fire ele- mental while retaining a functional necklace of fireballs.  Casler Level: 5th; Prerequisites: Craft Wondrous Item, poly- morph self or wild shape ability; Market Price: 4,000 gp; Weight:",
     "wild shape amulet: wslvl+4",
     "pearl of speech",
+    "ring of mental fortitude",
     "monks belt AC: +wis+1 = +5"
 ]);
 
